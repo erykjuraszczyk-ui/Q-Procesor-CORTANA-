@@ -1,0 +1,33 @@
+{
+  "report_schema": "qwp777-memory-comparison-1",
+  "comparison": "v2.1.0 vs v2.2.0 default experiment runner",
+  "workload": {
+    "num_qubits": 64,
+    "shots": 10,
+    "circuit": "GHZ-style Clifford circuit: H, CX chain, terminal measurement on all qubits",
+    "seed": 2026
+  },
+  "results": [
+    {
+      "release": "2.1.0",
+      "api_version": "2.1",
+      "num_qubits": 64,
+      "shots": 10,
+      "elapsed_seconds": 0.365700557999844,
+      "tracemalloc_peak_bytes": 448147,
+      "counts_sum": 10
+    },
+    {
+      "release": "2.2.0",
+      "api_version": "2.2",
+      "num_qubits": 64,
+      "shots": 10,
+      "elapsed_seconds": 0.3697739119998005,
+      "tracemalloc_peak_bytes": 307859,
+      "counts_sum": 10
+    }
+  ],
+  "peak_tracemalloc_bytes_reduced": 140288,
+  "peak_tracemalloc_reduction_percent": 31.304014084664182,
+  "caveat": "One Python environment and one workload; tracemalloc peak is not process RSS. This is an illustrative within-environment comparison, not a universal speed or memory guarantee."
+}

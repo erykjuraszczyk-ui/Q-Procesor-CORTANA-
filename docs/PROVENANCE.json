@@ -1,0 +1,73 @@
+{
+  "provenance_schema": "qwp777-build-provenance-1",
+  "software": {
+    "name": "QWP-777",
+    "release": "3.1.0",
+    "api_version": "3.0",
+    "result_schema": "qwp777-experiment-1"
+  },
+  "derived_from": {
+    "release": "3.0.0",
+    "archive": {
+      "name": "Qwantum-Processor-777-v3.0.0.zip",
+      "size_bytes": 257457,
+      "sha256": "1243fdde20f1e7fd7782703710f837187d67743f4f9e299d1ed73a928c80aadf"
+    }
+  },
+  "inputs": {
+    "release_audit": {
+      "path": "docs/RELEASE_AUDIT.json",
+      "size_bytes": 12676,
+      "sha256": "498f2ed6975de097bd9c4b9a4e75d1dda19ece2b614fe1d5f55e49aac84579c0"
+    },
+    "test_report": {
+      "path": "docs/TEST_REPORT.json",
+      "size_bytes": 813,
+      "sha256": "368608e4396414140243a8de612f451d7c23ab92218a236b69142aaaedd6bc03"
+    },
+    "api_contract": {
+      "path": "compatibility/api-v3.1.0.json",
+      "size_bytes": 1772,
+      "sha256": "6b2ccfd202322f136991583144b1f352b31399a8d3bc5d702cf43f5bd6d8cbb1"
+    },
+    "regression_baseline": {
+      "path": "regression/baselines/v3.1.0.json",
+      "size_bytes": 3467,
+      "sha256": "3e59ddd2607a11a84d685f93db26114e7dc2d552f903c3da683cca8547c1d55d"
+    },
+    "sbom": {
+      "path": "docs/SBOM.cdx.json",
+      "size_bytes": 4054,
+      "sha256": "02e3a3151278e1d729c35fd02b3e931b965b29579c98256a08a5aff87cc9a370"
+    },
+    "dependency_audit": {
+      "path": "docs/DEPENDENCY_AUDIT.json",
+      "size_bytes": 2559,
+      "sha256": "572d7fd3a9dbc8ed54e751cb00eec9500fdffd057991d6e9137d681000a0beb2"
+    }
+  },
+  "validation": {
+    "audit_passed": true,
+    "audit_checks_passed": 21,
+    "audit_checks_total": 21,
+    "unit_tests_run": 195,
+    "test_report_schema": "qwp777-test-report-1"
+  },
+  "build_environment": {
+    "timestamp_utc": "2026-10-25T07:54:13+00:00",
+    "python_version": "3.13.5",
+    "python_implementation": "CPython",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "builder": "qwp777-provenance-tool",
+    "builder_version": "3.1.0",
+    "repository_commit": null,
+    "repository_commit_note": "Not recorded because this source directory does not provide a verified Git commit ID."
+  },
+  "caveats": [
+    "This is a build-provenance summary, not an independently issued attestation.",
+    "The embedded manifest and its detached Ed25519 signature bind the exact files; the ZIP SHA-256 sidecar binds the outer archive bytes.",
+    "The source archive digest identifies the input archive but does not prove that this build was reproducible.",
+    "Publisher identity requires independently trusting the public-key fingerprint."
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "baseline_schema": "qwp777-regression-baseline-1",
+  "baseline_release": "1.5.0",
+  "description": "Fixed-seed regression cases captured from the QWP-777 v1.5.0 runner.",
+  "cases": [
+    {
+      "name": "zero-state",
+      "num_qubits": 1,
+      "gates": [
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            0
+          ]
+        }
+      ],
+      "shots": 256,
+      "seed": 1501,
+      "noise_probability": 0.0,
+      "expected_counts": {
+        "0": 256
+      }
+    },
+    {
+      "name": "pauli-x",
+      "num_qubits": 1,
+      "gates": [
+        {
+          "gate": "X",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            0
+          ]
+        }
+      ],
+      "shots": 256,
+      "seed": 1502,
+      "noise_probability": 0.0,
+      "expected_counts": {
+        "1": 256
+      }
+    },
+    {
+      "name": "bell-state",
+      "num_qubits": 2,
+      "gates": [
+        {
+          "gate": "H",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "gate": "CX",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            1
+          ]
+        }
+      ],
+      "shots": 512,
+      "seed": 1503,
+      "noise_probability": 0.0,
+      "expected_counts": {
+        "00": 258,
+        "11": 254
+      }
+    },
+    {
+      "name": "ghz-three-qubit",
+      "num_qubits": 3,
+      "gates": [
+        {
+          "gate": "H",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "gate": "CX",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "gate": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        },
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            2
+          ]
+        }
+      ],
+      "shots": 512,
+      "seed": 1504,
+      "noise_probability": 0.0,
+      "expected_counts": {
+        "000": 259,
+        "111": 253
+      }
+    },
+    {
+      "name": "hadamard-sampling",
+      "num_qubits": 1,
+      "gates": [
+        {
+          "gate": "H",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            0
+          ]
+        }
+      ],
+      "shots": 512,
+      "seed": 1505,
+      "noise_probability": 0.0,
+      "expected_counts": {
+        "0": 259,
+        "1": 253
+      }
+    },
+    {
+      "name": "zero-state-noisy-2pct",
+      "num_qubits": 1,
+      "gates": [
+        {
+          "gate": "MEASURE",
+          "qubits": [
+            0
+          ]
+        }
+      ],
+      "shots": 256,
+      "seed": 1506,
+      "noise_probability": 0.02,
+      "expected_counts": {
+        "0": 250,
+        "1": 6
+      }
+    }
+  ]
+}

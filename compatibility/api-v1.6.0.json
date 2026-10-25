@@ -1,0 +1,51 @@
+{
+  "compatibility_schema": "qwp777-api-compatibility-1",
+  "snapshot_release": "1.6.0",
+  "snapshot_api_version": "1.6",
+  "experiment_result_schema": "qwp777-experiment-1",
+  "public_exports": [
+    "__version__",
+    "API_VERSION",
+    "run_circuit",
+    "run_experiment",
+    "compare_distributions",
+    "validate_gates",
+    "validate_result",
+    "ExperimentError",
+    "CircuitSchemaError",
+    "ResultContractError",
+    "summarize_counts",
+    "StatisticsError",
+    "statevector_probabilities",
+    "validate_probability_distribution",
+    "ReferenceError",
+    "compare_counts_to_reference",
+    "DifferentialValidationError"
+  ],
+  "required_callable_exports": [
+    "run_circuit",
+    "run_experiment",
+    "compare_distributions",
+    "validate_gates",
+    "validate_result",
+    "summarize_counts",
+    "statevector_probabilities",
+    "validate_probability_distribution",
+    "compare_counts_to_reference"
+  ],
+  "notes": [
+    "Legacy public symbols must remain exported in minor releases.",
+    "This snapshot is a lightweight source-level compatibility contract, not a complete semantic proof."
+  ],
+  "callable_signatures": {
+    "run_circuit": "(config)",
+    "run_experiment": "(num_qubits, gates, shots=1000, seed=7, noise_probability=0.0)",
+    "compare_distributions": "(observed, reference)",
+    "validate_gates": "(gates, num_qubits)",
+    "validate_result": "(result)",
+    "summarize_counts": "(counts, shots=None)",
+    "statevector_probabilities": "(num_qubits, gates)",
+    "validate_probability_distribution": "(distribution, tolerance=1e-09)",
+    "compare_counts_to_reference": "(num_qubits, unitary_gates, counts)"
+  }
+}

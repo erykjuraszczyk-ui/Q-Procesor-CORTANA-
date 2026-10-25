@@ -1,0 +1,27 @@
+{
+  "report_schema": "qwp777-api-compatibility-report-1",
+  "current": {
+    "release": "2.9.0",
+    "api_version": "2.9",
+    "experiment_result_schema": "qwp777-experiment-1"
+  },
+  "contract": {
+    "path": "compatibility/api-v2.9.0.json",
+    "snapshot_release": "2.9.0",
+    "snapshot_api_version": "2.9"
+  },
+  "checks": {
+    "legacy_exports_present": true,
+    "required_symbols_callable": true,
+    "callable_signatures_unchanged": true,
+    "result_schema_unchanged": true
+  },
+  "missing_exports": [],
+  "non_callable_required_exports": [],
+  "signature_differences": {},
+  "compatible": true,
+  "notes": [
+    "Source-level compatibility checks do not prove semantic behavior compatibility.",
+    "Use immutable, versioned contract snapshots; the release audit independently checks the v1.6.0 legacy gate and the explicitly selected current-release contract."
+  ]
+}

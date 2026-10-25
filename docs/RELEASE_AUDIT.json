@@ -1,0 +1,407 @@
+{
+  "report_schema": "qwp777-release-audit-report-1",
+  "generated_utc": "2026-10-25T07:54:05+00:00",
+  "software": {
+    "release": "3.1.0",
+    "api_version": "3.0"
+  },
+  "summary": {
+    "passed": true,
+    "checks_total": 21,
+    "checks_passed": 21,
+    "checks_failed": 0,
+    "failed_checks": []
+  },
+  "checks": {
+    "unit_tests": true,
+    "api_compatibility": true,
+    "current_api_contract": true,
+    "previous_regression_baseline": true,
+    "current_regression_baseline": true,
+    "current_baseline_checksum": true,
+    "release_comparison_clean": true,
+    "hmac_signature_roundtrip": true,
+    "ed25519_signature_roundtrip": true,
+    "profile_runtime_smoke_test": true,
+    "memory_estimator_sanity": true,
+    "scaling_benchmark_smoke_test": true,
+    "soak_stability_smoke_test": true,
+    "stability_anomaly_analysis_smoke_test": true,
+    "cross_device_comparison_smoke_test": true,
+    "multi_release_series_smoke_test": true,
+    "release_manifest_smoke_test": true,
+    "release_manifest_signature_roundtrip": true,
+    "build_provenance_integrity_smoke_test": true,
+    "cyclonedx_sbom_integrity_smoke_test": true,
+    "offline_dependency_audit_smoke_test": true
+  },
+  "unit_tests": {
+    "passed": true,
+    "tests_run": 195,
+    "failures": 0,
+    "errors": 0,
+    "failure_details": [],
+    "error_details": [],
+    "output_tail": "...................................................................................................................................................................................................\n----------------------------------------------------------------------\nRan 195 tests in 26.824s\n\nOK\n"
+  },
+  "api_compatibility": {
+    "report_schema": "qwp777-api-compatibility-report-1",
+    "current": {
+      "release": "3.1.0",
+      "api_version": "3.0",
+      "experiment_result_schema": "qwp777-experiment-1"
+    },
+    "contract": {
+      "path": "compatibility/api-v1.6.0.json",
+      "snapshot_release": "1.6.0",
+      "snapshot_api_version": "1.6"
+    },
+    "checks": {
+      "legacy_exports_present": true,
+      "required_symbols_callable": true,
+      "callable_signatures_unchanged": true,
+      "result_schema_unchanged": true
+    },
+    "missing_exports": [],
+    "non_callable_required_exports": [],
+    "signature_differences": {},
+    "compatible": true,
+    "notes": [
+      "Source-level compatibility checks do not prove semantic behavior compatibility.",
+      "Use immutable, versioned contract snapshots; the release audit independently checks the v1.6.0 legacy gate and the explicitly selected current-release contract."
+    ]
+  },
+  "current_api_contract": {
+    "report_schema": "qwp777-api-compatibility-report-1",
+    "current": {
+      "release": "3.1.0",
+      "api_version": "3.0",
+      "experiment_result_schema": "qwp777-experiment-1"
+    },
+    "contract": {
+      "path": "compatibility/api-v3.1.0.json",
+      "snapshot_release": "3.1.0",
+      "snapshot_api_version": "3.0"
+    },
+    "checks": {
+      "legacy_exports_present": true,
+      "required_symbols_callable": true,
+      "callable_signatures_unchanged": true,
+      "result_schema_unchanged": true
+    },
+    "missing_exports": [],
+    "non_callable_required_exports": [],
+    "signature_differences": {},
+    "compatible": true,
+    "notes": [
+      "Source-level compatibility checks do not prove semantic behavior compatibility.",
+      "Use immutable, versioned contract snapshots; the release audit independently checks the v1.6.0 legacy gate and the explicitly selected current-release contract."
+    ]
+  },
+  "regression": {
+    "previous_baseline": {
+      "path": "regression/baselines/v1.5.0.json",
+      "sha256": "21d515e75eb672dbeb146a76393e22aaee4ae944dec245313dadb35a216adf00",
+      "summary": {
+        "cases_total": 6,
+        "cases_passed": 6,
+        "cases_failed": 0,
+        "passed": true,
+        "cases_with_distribution_changes": 0,
+        "maximum_total_variation_distance": 0.0,
+        "mean_total_variation_distance": 0.0
+      }
+    },
+    "current_baseline": {
+      "path": "regression/baselines/v3.1.0.json",
+      "sha256": "3e59ddd2607a11a84d685f93db26114e7dc2d552f903c3da683cca8547c1d55d",
+      "checksum_sidecar_valid": true,
+      "summary": {
+        "cases_total": 6,
+        "cases_passed": 6,
+        "cases_failed": 0,
+        "passed": true,
+        "cases_with_distribution_changes": 0,
+        "maximum_total_variation_distance": 0.0,
+        "mean_total_variation_distance": 0.0
+      }
+    }
+  },
+  "release_comparison": {
+    "report_schema": "qwp777-release-comparison-1",
+    "generated_utc": "2026-10-25T07:53:37+00:00",
+    "comparator_release": "3.1.0",
+    "previous_release": "2.9.0",
+    "current_release": "3.1.0",
+    "previous_report": "compatibility/reports/v2.9.0-regression.json",
+    "current_report": "generated in-memory from the v3.1.0 regression baseline",
+    "summary": {
+      "cases_compared_or_reported": 6,
+      "cases_shared": 6,
+      "cases_added": 0,
+      "cases_removed": 0,
+      "regression_failures": 0,
+      "cases_with_changed_distributions": 0,
+      "status_counts": {
+        "unchanged_and_passed": 6
+      },
+      "clean": true
+    },
+    "cases": [
+      {
+        "name": "bell-state",
+        "status": "unchanged_and_passed",
+        "previous_passed": true,
+        "current_passed": true,
+        "previous_shots": 512,
+        "current_shots": 512,
+        "distribution_changed": false,
+        "total_variation_distance": 0.0,
+        "hellinger_distance": 0.0,
+        "probability_delta_current_minus_previous": {
+          "00": 0.0,
+          "11": 0.0
+        },
+        "count_deltas_current_minus_previous": {
+          "00": 0,
+          "11": 0
+        }
+      },
+      {
+        "name": "ghz-three-qubit",
+        "status": "unchanged_and_passed",
+        "previous_passed": true,
+        "current_passed": true,
+        "previous_shots": 512,
+        "current_shots": 512,
+        "distribution_changed": false,
+        "total_variation_distance": 0.0,
+        "hellinger_distance": 0.0,
+        "probability_delta_current_minus_previous": {
+          "000": 0.0,
+          "111": 0.0
+        },
+        "count_deltas_current_minus_previous": {
+          "000": 0,
+          "111": 0
+        }
+      },
+      {
+        "name": "hadamard-sampling",
+        "status": "unchanged_and_passed",
+        "previous_passed": true,
+        "current_passed": true,
+        "previous_shots": 512,
+        "current_shots": 512,
+        "distribution_changed": false,
+        "total_variation_distance": 0.0,
+        "hellinger_distance": 0.0,
+        "probability_delta_current_minus_previous": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "count_deltas_current_minus_previous": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      {
+        "name": "pauli-x",
+        "status": "unchanged_and_passed",
+        "previous_passed": true,
+        "current_passed": true,
+        "previous_shots": 256,
+        "current_shots": 256,
+        "distribution_changed": false,
+        "total_variation_distance": 0.0,
+        "hellinger_distance": 0.0,
+        "probability_delta_current_minus_previous": {
+          "1": 0.0
+        },
+        "count_deltas_current_minus_previous": {
+          "1": 0
+        }
+      },
+      {
+        "name": "zero-state",
+        "status": "unchanged_and_passed",
+        "previous_passed": true,
+        "current_passed": true,
+        "previous_shots": 256,
+        "current_shots": 256,
+        "distribution_changed": false,
+        "total_variation_distance": 0.0,
+        "hellinger_distance": 0.0,
+        "probability_delta_current_minus_previous": {
+          "0": 0.0
+        },
+        "count_deltas_current_minus_previous": {
+          "0": 0
+        }
+      },
+      {
+        "name": "zero-state-noisy-2pct",
+        "status": "unchanged_and_passed",
+        "previous_passed": true,
+        "current_passed": true,
+        "previous_shots": 256,
+        "current_shots": 256,
+        "distribution_changed": false,
+        "total_variation_distance": 0.0,
+        "hellinger_distance": 0.0,
+        "probability_delta_current_minus_previous": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "count_deltas_current_minus_previous": {
+          "0": 0,
+          "1": 0
+        }
+      }
+    ],
+    "caveats": [
+      "TVD and Hellinger compare empirical distributions, not internal quantum states.",
+      "Changes in shot count or random-seed policy can alter empirical distributions.",
+      "A `regression_failure` means a case passed previously but failed against its current saved baseline; investigate before release.",
+      "A clean report is not exhaustive proof of correctness."
+    ]
+  },
+  "profile_runtime_smoke_test": {
+    "passed": true,
+    "timing_seconds": {
+      "samples": [
+        0.00024070400002074166
+      ],
+      "minimum": 0.00024070400002074166,
+      "median": 0.00024070400002074166,
+      "mean": 0.00024070400002074166,
+      "maximum": 0.00024070400002074166
+    },
+    "python_tracemalloc_peak_bytes": {
+      "samples": [
+        6812
+      ],
+      "maximum": 6812,
+      "mean": 6812.0
+    },
+    "runtime": {
+      "python_version": "3.13.5",
+      "python_implementation": "CPython",
+      "python_executable": "/opt/pyvenv/bin/python",
+      "os_system": "Linux",
+      "os_release": "6.18.55",
+      "machine_architecture": "x86_64",
+      "processor_description": null,
+      "logical_cpu_count": 5,
+      "total_memory_bytes": 6236856320
+    }
+  },
+  "memory_estimator_smoke_test": {
+    "passed": true,
+    "one_qubit_list_container_bytes": 472,
+    "eight_qubit_list_container_bytes": 4392
+  },
+  "scaling_benchmark_smoke_test": {
+    "passed": true,
+    "summary": {
+      "cases_total": 2,
+      "cases_passed": 2,
+      "cases_failed": 0,
+      "maximum_elapsed_seconds": 3.24190000355884e-05,
+      "maximum_tracemalloc_peak_bytes": 4584
+    },
+    "planned_work_units": 36
+  },
+  "soak_stability_smoke_test": {
+    "passed": true,
+    "rss_available": true,
+    "tracemalloc_peak_bytes": 14432
+  },
+  "stability_anomaly_analysis_smoke_test": {
+    "passed": true,
+    "status": "no_suspicious_growth",
+    "findings_total": 0
+  },
+  "cross_device_comparison_smoke_test": {
+    "passed": true,
+    "workloads_match": true,
+    "same_host_fingerprint": true
+  },
+  "multi_release_series_smoke_test": {
+    "passed": true,
+    "releases_total": 2,
+    "release_transitions_compared": 1,
+    "cross_release_regression_failures": 0
+  },
+  "release_manifest_smoke_test": {
+    "passed": true,
+    "files_total": 2,
+    "tamper_detected": true
+  },
+  "release_manifest_signature_smoke_test": {
+    "status": "passed",
+    "roundtrip_verified": true,
+    "tampered_manifest_rejected": true
+  },
+  "build_provenance_integrity_smoke_test": {
+    "passed": true,
+    "inputs_checked": 4,
+    "tamper_detected": true
+  },
+  "cyclonedx_sbom_smoke_test": {
+    "passed": true,
+    "verification": {
+      "report_schema": "qwp777-sbom-verification-1",
+      "verified": true,
+      "components_expected": 3,
+      "components_found": 3,
+      "missing_components": [],
+      "unexpected_components": [],
+      "checks": {
+        "cyclonedx_format": true,
+        "cyclonedx_version": true,
+        "application_version": true,
+        "application_identity": true,
+        "declared_dependencies_covered": true,
+        "dependency_policy_hash_matches": true,
+        "no_vulnerability_scan_claim": true
+      }
+    }
+  },
+  "offline_dependency_audit_smoke_test": {
+    "passed": true,
+    "summary": {
+      "passed": true,
+      "source_imports_found": 3,
+      "declared_imports": 3,
+      "undeclared_imports": [],
+      "sbom_verified": true,
+      "optional_dependencies_total": 3,
+      "optional_dependencies_installed_in_build_environment": 1
+    },
+    "vulnerability_status": "not_assessed",
+    "live_vulnerability_database_used": false
+  },
+  "signature_verification": {
+    "self_test": {
+      "hmac_sha256": {
+        "status": "passed",
+        "verification": true
+      },
+      "ed25519": {
+        "status": "passed",
+        "verification": true,
+        "algorithm": "Ed25519"
+      }
+    },
+    "external_archive": {
+      "status": "not_requested"
+    }
+  },
+  "caveats": [
+    "Release audit combines finite tests and declared contracts; it is not formal verification.",
+    "Cryptographic signatures authenticate artifacts for the configured trust model, not scientific validity.",
+    "The optional Qiskit Aer backend is not part of this audit unless separately invoked.",
+    "QWP-777 is software prototype code, not physical quantum hardware."
+  ]
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+result.json
+keys/
+*.private.pem
+*_private.pem
+*.key

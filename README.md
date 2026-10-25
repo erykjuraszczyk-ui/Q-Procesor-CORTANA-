@@ -1,65 +1,62 @@
-# QWP-777 — Qwantum Processor 777
+# Qwantum Processor 777 — QWP-777 v3.1.0
 
-**Release:** v3.1.0  
-**API contract:** 3.0  
-**Result schema:** `qwp777-experiment-1`
+QWP-777 is a software-based stabilizer / Clifford-circuit simulator and validation toolkit. It is not physical quantum hardware, and 777 is the product target/name rather than a claim that arbitrary 777-qubit circuits can be efficiently simulated.
 
-QWP-777 is a software prototype for simulating stabilizer/Clifford quantum circuits and conducting reproducible experiments. It is **not** a physical quantum processor and is not a universal simulator for arbitrary circuits at 777 qubits.
+**Software release:** 3.1.0 · **API:** 3.0 (compatible) · **Result schema:** `qwp777-experiment-1`
 
-## Release package
+## What's new in v3.1.0
 
-The v3.1.0 ZIP was built and tested locally:
-- Unit tests: 195/195 passed.
-- Release audit: 21/21 checks passed.
-- Manifest: 236/236 packaged files matched.
-- Archive, SBOM, provenance and detached manifest signature verification passed.
+- GitHub Actions now separates read-only validation from tag-only publishing.
+- A release tag must match `VERSION` exactly (for example, `v3.1.0`) or publication stops.
+- Tagged releases are built from validated artifacts, their SHA-256 sidecar is checked again, and the workflow publishes a GitHub Release.
+- The workflow requests GitHub/Sigstore artifact provenance for the release ZIP.
+- The local release pipeline derives its archive and report filenames from `VERSION`, so new versions no longer require editing every hard-coded output path.
+- New tests cover exact tag/version matching and reject mismatched or malformed tags.
+- Public API signatures and `qwp777-experiment-1` remain unchanged.
 
-These are local results; GitHub Actions has not yet been confirmed running on this repository.
+## Quick start
 
-## Import the full source package
-
-The full ZIP is currently attached to the ChatGPT conversation, not published as a public GitHub Release asset. To add all project files, download the ZIP from the conversation to your device and follow the steps below.
-
-### Termux / Android
-
-1. Download `Qwantum-Processor-777-v3.1.0.zip` into **Download**.
-2. Run:
+Requires Python 3.12+ (the CI workflow is configured for Python 3.12).
 
 ```bash
-pkg update
-pkg install git unzip
-termux-setup-storage
-cd ~/storage/shared/Download
+python -m unittest discover -s tests -v
+python src/qwp777_api.py --help
+python src/qwp777_release_audit.py -o docs/RELEASE_AUDIT.json
+```
+
+## Build a release package locally
+
+```bash
+bash scripts/ci_release.sh
+```
+
+The pipeline runs compilation, the full unit suite, API compatibility, fixed-seed regression, SBOM verification, offline dependency audit, release audit, provenance checks, manifest verification, and ZIP integrity checks. Artifacts are written to `../dist-v3.1.0` by default, or to the output path supplied as the first argument.
+
+## Release tagging
+
+Before creating a tag, commit the desired source and `VERSION` together. For this release, the tag must be exactly `v3.1.0`. On GitHub, the workflow runs validation first; only a matching `v*` tag can proceed to the publication job. The publishing job downloads only the validated artifact bundle, rechecks the ZIP checksum, attests the archive, and creates the GitHub Release.
+
+## Verifying downloads
+
+```bash
+sha256sum -c Qwantum-Processor-777-v3.1.0.zip.sha256
 unzip Qwantum-Processor-777-v3.1.0.zip
-git clone https://github.com/erykjuraszczyk-ui/Q-Procesor-CORTANA-.git
-cd Q-Procesor-CORTANA-
-cp -a ../QWP-777-v3.1.0/. .
-git status --short
-git add .
-git commit -m "feat: import QWP-777 v3.1.0"
-git push origin main
+cd QWP-777-v3.1.0
+python src/qwp777_release_package.py verify --root .
+python src/qwp777_provenance.py verify --root .
 ```
 
-Review `git status --short` before committing. Do not force-push or overwrite repository history. If the extracted directory has a different name, adjust the `cp` source path accordingly. GitHub may prompt for authentication; use an approved credential method, never paste a token into this README or a public file.
-
-## Verification
-
-Check the ZIP hash before extracting:
+To verify a GitHub artifact attestation, use GitHub CLI with the release archive and repository identity, for example:
 
 ```bash
-sha256sum Qwantum-Processor-777-v3.1.0.zip
+gh attestation verify Qwantum-Processor-777-v3.1.0.zip --repo OWNER/REPOSITORY
 ```
 
-Expected SHA-256:
+Replace `OWNER/REPOSITORY` with the actual GitHub repository path. This attestation step is only created when the workflow runs in a supported GitHub repository with the required permissions.
 
-```
-e73b1f9b65faa991b32a0d29ed39f68a6bff57bd985eca6c9c817d0bebdf69b7
-```
+## Security and scientific limitations
 
-A detached signature verifies the manifest against the supplied public key; it does not independently establish publisher identity. Verify the public-key fingerprint through an independent trusted channel.
-
-## Scope and limitations
-
-- No claim of execution on real quantum hardware.
-- Dependency vulnerability status has not been assessed against live CVE/OSV databases.
-- Android/Termux testing and remote GitHub Actions execution remain unverified.
+- The dependency audit is static and offline; it does not query CVE, OSV, or vendor advisory databases.
+- Local testing does not prove the GitHub-hosted workflow itself succeeded. A release run must be confirmed in the repository's Actions tab.
+- GitHub/Sigstore attestation authenticates workflow provenance when supported and verified; it is not a proof of scientific correctness.
+- Passing simulation tests is not proof of general-purpose quantum hardware equivalence.

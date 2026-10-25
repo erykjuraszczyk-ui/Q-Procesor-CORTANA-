@@ -1,0 +1,44 @@
+{
+  "dependency_policy_schema": "qwp777-dependency-policy-1",
+  "project": "QWP-777",
+  "python_minimum": "3.10",
+  "mandatory_runtime_dependencies": [],
+  "optional_dependencies": [
+    {
+      "name": "cryptography",
+      "distribution": "cryptography",
+      "import_names": ["cryptography"],
+      "purl": "pkg:pypi/cryptography",
+      "feature": "Ed25519 release-manifest signing and verification",
+      "scope": "optional",
+      "version_constraint": null,
+      "version_policy": "unlocked; record observed version separately"
+    },
+    {
+      "name": "qiskit",
+      "distribution": "qiskit",
+      "import_names": ["qiskit"],
+      "purl": "pkg:pypi/qiskit",
+      "feature": "Optional Qiskit Aer comparison adapter",
+      "scope": "optional",
+      "version_constraint": null,
+      "version_policy": "unlocked; record observed version separately"
+    },
+    {
+      "name": "qiskit-aer",
+      "distribution": "qiskit-aer",
+      "import_names": ["qiskit_aer"],
+      "purl": "pkg:pypi/qiskit-aer",
+      "feature": "Optional Aer simulation backend used with Qiskit",
+      "scope": "optional",
+      "version_constraint": null,
+      "version_policy": "unlocked; record observed version separately"
+    }
+  ],
+  "security_assessment": {
+    "mode": "offline-static",
+    "live_vulnerability_database_used": false,
+    "vulnerability_status": "not_assessed",
+    "note": "The dependency audit verifies declarations and import coverage only. It does not query CVE/OSV/advisory services and must not be interpreted as a clean vulnerability scan."
+  }
+}

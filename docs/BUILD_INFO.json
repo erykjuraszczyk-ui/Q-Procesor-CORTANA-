@@ -1,0 +1,16 @@
+{
+  "release": "2.9.0",
+  "api_version": "2.9",
+  "result_schema": "qwp777-experiment-1",
+  "built_utc": "2026-10-24T19:41:47+00:00",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "unit_tests": 188,
+  "validation": [
+    "syntax-compilation",
+    "unit-tests",
+    "regression",
+    "sbom",
+    "offline-dependency-audit"
+  ]
+}

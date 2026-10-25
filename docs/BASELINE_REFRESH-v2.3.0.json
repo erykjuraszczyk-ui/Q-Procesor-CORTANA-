@@ -1,0 +1,13 @@
+{
+  "report_schema": "qwp777-baseline-refresh-report-1",
+  "approved": true,
+  "baseline_version": "2.3.0",
+  "output": "regression/baselines/v2.3.0.json",
+  "sha256": "0a4a2a8c16666058915c7d5c78db9e536d0fbd92c88cb84cb7121722353b9439",
+  "source_sha256": "cb37e1454f1f771063c227c0e9d9969445ce4c54d5690018bfda2502c54525de",
+  "cases_written": 6,
+  "notes": [
+    "The source baseline was read-only and was not modified.",
+    "Review the generated counts and checksum before treating the refreshed baseline as a trusted release artifact."
+  ]
+}

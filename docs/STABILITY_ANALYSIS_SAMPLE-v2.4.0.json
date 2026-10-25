@@ -1,0 +1,51 @@
+{
+  "report_schema": "qwp777-stability-analysis-1",
+  "software": {
+    "release": "2.4.0"
+  },
+  "input": {
+    "report_schema": "qwp777-soak-report-1",
+    "circuit_identity_sha256": "36b03e60ba29e2129243a7f590fe8dfef3061dca6d8831bf5aa2ba6f9aba8896",
+    "samples_total": 6,
+    "rss_samples_total": 6
+  },
+  "configuration": {
+    "min_samples": 5,
+    "python_growth_threshold_bytes": 1048576,
+    "rss_growth_threshold_bytes": 16777216
+  },
+  "metrics": {
+    "python_tracemalloc_current_bytes_after_cleanup": {
+      "first": 289,
+      "last": 3133,
+      "delta": 2844,
+      "minimum": 289,
+      "maximum": 3133,
+      "linear_slope_bytes_per_iteration": 565.1428571428571
+    },
+    "rss_current_bytes_after_cleanup": {
+      "first": 98570240,
+      "last": 98570240,
+      "delta": 0,
+      "minimum": 98570240,
+      "maximum": 98570240,
+      "linear_slope_bytes_per_sample": 0.0,
+      "available": true
+    },
+    "duration_seconds": {
+      "median": 0.0011453224997239886,
+      "maximum": 0.0013048270002400386
+    }
+  },
+  "summary": {
+    "status": "no_suspicious_growth",
+    "findings_total": 0,
+    "findings": [],
+    "interpretation": "An anomaly candidate is a heuristic signal for investigation, not proof of a leak."
+  },
+  "caveats": [
+    "tracemalloc measures tracked Python allocations, not total process memory.",
+    "RSS may be unavailable, noisy, or affected by allocator behavior and host background activity.",
+    "A short soak cannot establish that a memory leak is present or absent; repeat longer tests on target devices."
+  ]
+}

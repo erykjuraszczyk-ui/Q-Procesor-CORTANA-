@@ -1,0 +1,80 @@
+{
+  "report_schema": "qwp777-dependency-audit-1",
+  "generated_utc": "2026-10-25T07:53:33+00:00",
+  "software": {
+    "name": "QWP-777",
+    "release": "3.1.0"
+  },
+  "summary": {
+    "passed": true,
+    "source_imports_found": 3,
+    "declared_imports": 3,
+    "undeclared_imports": [],
+    "sbom_verified": true,
+    "optional_dependencies_total": 3,
+    "optional_dependencies_installed_in_build_environment": 1
+  },
+  "source_import_modules": [
+    "cryptography",
+    "qiskit",
+    "qiskit_aer"
+  ],
+  "optional_dependencies": [
+    {
+      "name": "cryptography",
+      "distribution": "cryptography",
+      "scope": "optional",
+      "installed_in_build_environment": true,
+      "observed_version": "46.0.4",
+      "version_constraint": null,
+      "feature": "Ed25519 release-manifest signing and verification"
+    },
+    {
+      "name": "qiskit",
+      "distribution": "qiskit",
+      "scope": "optional",
+      "installed_in_build_environment": false,
+      "observed_version": null,
+      "version_constraint": null,
+      "feature": "Optional Qiskit Aer comparison adapter"
+    },
+    {
+      "name": "qiskit-aer",
+      "distribution": "qiskit-aer",
+      "scope": "optional",
+      "installed_in_build_environment": false,
+      "observed_version": null,
+      "version_constraint": null,
+      "feature": "Optional Aer simulation backend used with Qiskit"
+    }
+  ],
+  "sbom_verification": {
+    "report_schema": "qwp777-sbom-verification-1",
+    "verified": true,
+    "components_expected": 3,
+    "components_found": 3,
+    "missing_components": [],
+    "unexpected_components": [],
+    "checks": {
+      "cyclonedx_format": true,
+      "cyclonedx_version": true,
+      "application_version": true,
+      "application_identity": true,
+      "declared_dependencies_covered": true,
+      "dependency_policy_hash_matches": true,
+      "no_vulnerability_scan_claim": true
+    }
+  },
+  "security_assessment": {
+    "mode": "offline-static",
+    "live_vulnerability_database_used": false,
+    "vulnerability_status": "not_assessed",
+    "vulnerability_scan_performed": false,
+    "note": "The dependency audit verifies declarations and import coverage only. It does not query CVE/OSV/advisory services and must not be interpreted as a clean vulnerability scan."
+  },
+  "caveats": [
+    "This report checks dependency declarations and source-import coverage only.",
+    "No CVE, OSV, vendor advisory, malware, or license service was queried.",
+    "Versions observed in the build environment do not pin or describe every target environment."
+  ]
+}

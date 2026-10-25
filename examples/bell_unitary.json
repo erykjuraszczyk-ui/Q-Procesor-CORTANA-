@@ -1,0 +1,19 @@
+{
+  "num_qubits": 2,
+  "gates": [
+    {
+      "gate": "H",
+      "qubits": [
+        0
+      ]
+    },
+    {
+      "gate": "CX",
+      "qubits": [
+        0,
+        1
+      ]
+    }
+  ],
+  "description": "Unitary part of a Bell-state circuit; use for reference probabilities."
+}

@@ -1,0 +1,34 @@
+{
+  "report_schema": "qwp777-test-report-1",
+  "software": {
+    "name": "QWP-777",
+    "release": "3.1.0",
+    "api_version": "3.0",
+    "result_schema": "qwp777-experiment-1"
+  },
+  "summary": {
+    "tests_run": 195,
+    "tests_passed": 195,
+    "failures": 0,
+    "errors": 0,
+    "status": "passed"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41"
+  },
+  "validation_steps": [
+    "compileall",
+    "unittest",
+    "API compatibility",
+    "fixed-seed regression",
+    "CycloneDX SBOM",
+    "offline dependency audit",
+    "release audit",
+    "tag/version guard unit tests"
+  ],
+  "limitations": [
+    "No online CVE/OSV/vendor-advisory database was queried.",
+    "GitHub Actions and Android/Termux require execution in their target environments."
+  ]
+}

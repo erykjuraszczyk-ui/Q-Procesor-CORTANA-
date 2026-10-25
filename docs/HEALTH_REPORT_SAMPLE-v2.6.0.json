@@ -1,0 +1,599 @@
+{
+  "report_schema": "qwp777-health-report-1",
+  "generated_utc": "2026-10-24T19:06:38+00:00",
+  "reports_total": 2,
+  "reports_with_warning_status": 0,
+  "overall_status": "informational_or_ok",
+  "reports": [
+    {
+      "file": "RELEASE_AUDIT.json",
+      "report_schema": "qwp777-release-audit-report-1",
+      "status": true,
+      "software": {
+        "release": "2.6.0",
+        "api_version": "2.6"
+      },
+      "summary": {
+        "passed": true,
+        "checks_total": 16,
+        "checks_passed": 16,
+        "checks_failed": 0,
+        "failed_checks": []
+      },
+      "data": {
+        "report_schema": "qwp777-release-audit-report-1",
+        "generated_utc": "2026-10-24T19:06:38+00:00",
+        "software": {
+          "release": "2.6.0",
+          "api_version": "2.6"
+        },
+        "summary": {
+          "passed": true,
+          "checks_total": 16,
+          "checks_passed": 16,
+          "checks_failed": 0,
+          "failed_checks": []
+        },
+        "checks": {
+          "unit_tests": true,
+          "api_compatibility": true,
+          "current_api_contract": true,
+          "previous_regression_baseline": true,
+          "current_regression_baseline": true,
+          "current_baseline_checksum": true,
+          "release_comparison_clean": true,
+          "hmac_signature_roundtrip": true,
+          "ed25519_signature_roundtrip": true,
+          "profile_runtime_smoke_test": true,
+          "memory_estimator_sanity": true,
+          "scaling_benchmark_smoke_test": true,
+          "soak_stability_smoke_test": true,
+          "stability_anomaly_analysis_smoke_test": true,
+          "cross_device_comparison_smoke_test": true,
+          "multi_release_series_smoke_test": true
+        },
+        "unit_tests": {
+          "passed": true,
+          "tests_run": 159,
+          "failures": 0,
+          "errors": 0,
+          "failure_details": [],
+          "error_details": [],
+          "output_tail": "...............................................................................................................................................................\n----------------------------------------------------------------------\nRan 159 tests in 2.000s\n\nOK\n"
+        },
+        "api_compatibility": {
+          "report_schema": "qwp777-api-compatibility-report-1",
+          "current": {
+            "release": "2.6.0",
+            "api_version": "2.6",
+            "experiment_result_schema": "qwp777-experiment-1"
+          },
+          "contract": {
+            "path": "compatibility/api-v1.6.0.json",
+            "snapshot_release": "1.6.0",
+            "snapshot_api_version": "1.6"
+          },
+          "checks": {
+            "legacy_exports_present": true,
+            "required_symbols_callable": true,
+            "callable_signatures_unchanged": true,
+            "result_schema_unchanged": true
+          },
+          "missing_exports": [],
+          "non_callable_required_exports": [],
+          "signature_differences": {},
+          "compatible": true,
+          "notes": [
+            "Source-level compatibility checks do not prove semantic behavior compatibility.",
+            "Use immutable, versioned contract snapshots; the release audit independently checks the v1.6.0 legacy gate and the explicitly selected current-release contract."
+          ]
+        },
+        "current_api_contract": {
+          "report_schema": "qwp777-api-compatibility-report-1",
+          "current": {
+            "release": "2.6.0",
+            "api_version": "2.6",
+            "experiment_result_schema": "qwp777-experiment-1"
+          },
+          "contract": {
+            "path": "compatibility/api-v2.6.0.json",
+            "snapshot_release": "2.6.0",
+            "snapshot_api_version": "2.6"
+          },
+          "checks": {
+            "legacy_exports_present": true,
+            "required_symbols_callable": true,
+            "callable_signatures_unchanged": true,
+            "result_schema_unchanged": true
+          },
+          "missing_exports": [],
+          "non_callable_required_exports": [],
+          "signature_differences": {},
+          "compatible": true,
+          "notes": [
+            "Source-level compatibility checks do not prove semantic behavior compatibility.",
+            "Use immutable, versioned contract snapshots; the release audit independently checks the v1.6.0 legacy gate and the explicitly selected current-release contract."
+          ]
+        },
+        "regression": {
+          "previous_baseline": {
+            "path": "regression/baselines/v1.5.0.json",
+            "sha256": "21d515e75eb672dbeb146a76393e22aaee4ae944dec245313dadb35a216adf00",
+            "summary": {
+              "cases_total": 6,
+              "cases_passed": 6,
+              "cases_failed": 0,
+              "passed": true,
+              "cases_with_distribution_changes": 0,
+              "maximum_total_variation_distance": 0.0,
+              "mean_total_variation_distance": 0.0
+            }
+          },
+          "current_baseline": {
+            "path": "regression/baselines/v2.6.0.json",
+            "sha256": "c0818684ad0f6349cd2ffb082897d523552bf50a88fa61d20c5ee0cfdc13167b",
+            "checksum_sidecar_valid": true,
+            "summary": {
+              "cases_total": 6,
+              "cases_passed": 6,
+              "cases_failed": 0,
+              "passed": true,
+              "cases_with_distribution_changes": 0,
+              "maximum_total_variation_distance": 0.0,
+              "mean_total_variation_distance": 0.0
+            }
+          }
+        },
+        "release_comparison": {
+          "report_schema": "qwp777-release-comparison-1",
+          "generated_utc": "2026-10-24T19:06:35+00:00",
+          "comparator_release": "2.6.0",
+          "previous_release": "2.5.0",
+          "current_release": "2.6.0",
+          "previous_report": "compatibility/reports/v2.5.0-regression.json",
+          "current_report": "generated in-memory from the v2.6.0 regression baseline",
+          "summary": {
+            "cases_compared_or_reported": 6,
+            "cases_shared": 6,
+            "cases_added": 0,
+            "cases_removed": 0,
+            "regression_failures": 0,
+            "cases_with_changed_distributions": 0,
+            "status_counts": {
+              "unchanged_and_passed": 6
+            },
+            "clean": true
+          },
+          "cases": [
+            {
+              "name": "bell-state",
+              "status": "unchanged_and_passed",
+              "previous_passed": true,
+              "current_passed": true,
+              "previous_shots": 512,
+              "current_shots": 512,
+              "distribution_changed": false,
+              "total_variation_distance": 0.0,
+              "hellinger_distance": 0.0,
+              "probability_delta_current_minus_previous": {
+                "00": 0.0,
+                "11": 0.0
+              },
+              "count_deltas_current_minus_previous": {
+                "00": 0,
+                "11": 0
+              }
+            },
+            {
+              "name": "ghz-three-qubit",
+              "status": "unchanged_and_passed",
+              "previous_passed": true,
+              "current_passed": true,
+              "previous_shots": 512,
+              "current_shots": 512,
+              "distribution_changed": false,
+              "total_variation_distance": 0.0,
+              "hellinger_distance": 0.0,
+              "probability_delta_current_minus_previous": {
+                "000": 0.0,
+                "111": 0.0
+              },
+              "count_deltas_current_minus_previous": {
+                "000": 0,
+                "111": 0
+              }
+            },
+            {
+              "name": "hadamard-sampling",
+              "status": "unchanged_and_passed",
+              "previous_passed": true,
+              "current_passed": true,
+              "previous_shots": 512,
+              "current_shots": 512,
+              "distribution_changed": false,
+              "total_variation_distance": 0.0,
+              "hellinger_distance": 0.0,
+              "probability_delta_current_minus_previous": {
+                "0": 0.0,
+                "1": 0.0
+              },
+              "count_deltas_current_minus_previous": {
+                "0": 0,
+                "1": 0
+              }
+            },
+            {
+              "name": "pauli-x",
+              "status": "unchanged_and_passed",
+              "previous_passed": true,
+              "current_passed": true,
+              "previous_shots": 256,
+              "current_shots": 256,
+              "distribution_changed": false,
+              "total_variation_distance": 0.0,
+              "hellinger_distance": 0.0,
+              "probability_delta_current_minus_previous": {
+                "1": 0.0
+              },
+              "count_deltas_current_minus_previous": {
+                "1": 0
+              }
+            },
+            {
+              "name": "zero-state",
+              "status": "unchanged_and_passed",
+              "previous_passed": true,
+              "current_passed": true,
+              "previous_shots": 256,
+              "current_shots": 256,
+              "distribution_changed": false,
+              "total_variation_distance": 0.0,
+              "hellinger_distance": 0.0,
+              "probability_delta_current_minus_previous": {
+                "0": 0.0
+              },
+              "count_deltas_current_minus_previous": {
+                "0": 0
+              }
+            },
+            {
+              "name": "zero-state-noisy-2pct",
+              "status": "unchanged_and_passed",
+              "previous_passed": true,
+              "current_passed": true,
+              "previous_shots": 256,
+              "current_shots": 256,
+              "distribution_changed": false,
+              "total_variation_distance": 0.0,
+              "hellinger_distance": 0.0,
+              "probability_delta_current_minus_previous": {
+                "0": 0.0,
+                "1": 0.0
+              },
+              "count_deltas_current_minus_previous": {
+                "0": 0,
+                "1": 0
+              }
+            }
+          ],
+          "caveats": [
+            "TVD and Hellinger compare empirical distributions, not internal quantum states.",
+            "Changes in shot count or random-seed policy can alter empirical distributions.",
+            "A `regression_failure` means a case passed previously but failed against its current saved baseline; investigate before release.",
+            "A clean report is not exhaustive proof of correctness."
+          ]
+        },
+        "profile_runtime_smoke_test": {
+          "passed": true,
+          "timing_seconds": {
+            "samples": [
+              0.0002853889999983039
+            ],
+            "minimum": 0.0002853889999983039,
+            "median": 0.0002853889999983039,
+            "mean": 0.0002853889999983039,
+            "maximum": 0.0002853889999983039
+          },
+          "python_tracemalloc_peak_bytes": {
+            "samples": [
+              6812
+            ],
+            "maximum": 6812,
+            "mean": 6812.0
+          },
+          "runtime": {
+            "python_version": "3.13.5",
+            "python_implementation": "CPython",
+            "python_executable": "/opt/pyvenv/bin/python",
+            "os_system": "Linux",
+            "os_release": "6.18.55",
+            "machine_architecture": "x86_64",
+            "processor_description": null,
+            "logical_cpu_count": 5,
+            "total_memory_bytes": 6236856320
+          }
+        },
+        "memory_estimator_smoke_test": {
+          "passed": true,
+          "one_qubit_list_container_bytes": 472,
+          "eight_qubit_list_container_bytes": 4392
+        },
+        "scaling_benchmark_smoke_test": {
+          "passed": true,
+          "summary": {
+            "cases_total": 2,
+            "cases_passed": 2,
+            "cases_failed": 0,
+            "maximum_elapsed_seconds": 3.3970999993471196e-05,
+            "maximum_tracemalloc_peak_bytes": 4584
+          },
+          "planned_work_units": 36
+        },
+        "soak_stability_smoke_test": {
+          "passed": true,
+          "rss_available": true,
+          "tracemalloc_peak_bytes": 14432
+        },
+        "stability_anomaly_analysis_smoke_test": {
+          "passed": true,
+          "status": "no_suspicious_growth",
+          "findings_total": 0
+        },
+        "cross_device_comparison_smoke_test": {
+          "passed": true,
+          "workloads_match": true,
+          "same_host_fingerprint": true
+        },
+        "multi_release_series_smoke_test": {
+          "passed": true,
+          "releases_total": 2,
+          "release_transitions_compared": 1,
+          "cross_release_regression_failures": 0
+        },
+        "signature_verification": {
+          "self_test": {
+            "hmac_sha256": {
+              "status": "passed",
+              "verification": true
+            },
+            "ed25519": {
+              "status": "passed",
+              "verification": true,
+              "algorithm": "Ed25519"
+            }
+          },
+          "external_archive": {
+            "status": "not_requested"
+          }
+        },
+        "caveats": [
+          "Release audit combines finite tests and declared contracts; it is not formal verification.",
+          "Cryptographic signatures authenticate artifacts for the configured trust model, not scientific validity.",
+          "The optional Qiskit Aer backend is not part of this audit unless separately invoked.",
+          "QWP-777 is software prototype code, not physical quantum hardware."
+        ]
+      }
+    },
+    {
+      "file": "v2.6.0-regression.json",
+      "report_schema": "qwp777-regression-report-2",
+      "status": true,
+      "software": {
+        "release": "2.6.0",
+        "api_version": "2.6"
+      },
+      "summary": {
+        "cases_total": 6,
+        "cases_passed": 6,
+        "cases_failed": 0,
+        "passed": true,
+        "cases_with_distribution_changes": 0,
+        "maximum_total_variation_distance": 0.0,
+        "mean_total_variation_distance": 0.0
+      },
+      "data": {
+        "report_schema": "qwp777-regression-report-2",
+        "generated_utc": "2026-10-24T19:06:35+00:00",
+        "software": {
+          "release": "2.6.0",
+          "api_version": "2.6"
+        },
+        "baseline": {
+          "path": "regression/baselines/v2.6.0.json",
+          "baseline_release": "2.6.0",
+          "sha256": "c0818684ad0f6349cd2ffb082897d523552bf50a88fa61d20c5ee0cfdc13167b",
+          "case_count": 6,
+          "comparison_mode": "exact-counts-for-fixed-seed"
+        },
+        "summary": {
+          "cases_total": 6,
+          "cases_passed": 6,
+          "cases_failed": 0,
+          "passed": true,
+          "cases_with_distribution_changes": 0,
+          "maximum_total_variation_distance": 0.0,
+          "mean_total_variation_distance": 0.0
+        },
+        "cases": [
+          {
+            "name": "zero-state",
+            "passed": true,
+            "comparison_mode": "exact-counts-for-fixed-seed",
+            "expected_counts": {
+              "0": 256
+            },
+            "actual_counts": {
+              "0": 256
+            },
+            "count_delta_actual_minus_expected": {
+              "0": 0
+            },
+            "total_variation_distance": 0.0,
+            "hellinger_distance": 0.0,
+            "probability_delta_actual_minus_expected": {
+              "0": 0.0
+            },
+            "shots": 256,
+            "seed": 1501,
+            "noise_probability": 0.0,
+            "baseline_release": "2.6.0",
+            "current_release": "2.6.0",
+            "detail": "Counts match the saved baseline."
+          },
+          {
+            "name": "pauli-x",
+            "passed": true,
+            "comparison_mode": "exact-counts-for-fixed-seed",
+            "expected_counts": {
+              "1": 256
+            },
+            "actual_counts": {
+              "1": 256
+            },
+            "count_delta_actual_minus_expected": {
+              "1": 0
+            },
+            "total_variation_distance": 0.0,
+            "hellinger_distance": 0.0,
+            "probability_delta_actual_minus_expected": {
+              "1": 0.0
+            },
+            "shots": 256,
+            "seed": 1502,
+            "noise_probability": 0.0,
+            "baseline_release": "2.6.0",
+            "current_release": "2.6.0",
+            "detail": "Counts match the saved baseline."
+          },
+          {
+            "name": "bell-state",
+            "passed": true,
+            "comparison_mode": "exact-counts-for-fixed-seed",
+            "expected_counts": {
+              "00": 258,
+              "11": 254
+            },
+            "actual_counts": {
+              "00": 258,
+              "11": 254
+            },
+            "count_delta_actual_minus_expected": {
+              "00": 0,
+              "11": 0
+            },
+            "total_variation_distance": 0.0,
+            "hellinger_distance": 0.0,
+            "probability_delta_actual_minus_expected": {
+              "00": 0.0,
+              "11": 0.0
+            },
+            "shots": 512,
+            "seed": 1503,
+            "noise_probability": 0.0,
+            "baseline_release": "2.6.0",
+            "current_release": "2.6.0",
+            "detail": "Counts match the saved baseline."
+          },
+          {
+            "name": "ghz-three-qubit",
+            "passed": true,
+            "comparison_mode": "exact-counts-for-fixed-seed",
+            "expected_counts": {
+              "000": 259,
+              "111": 253
+            },
+            "actual_counts": {
+              "000": 259,
+              "111": 253
+            },
+            "count_delta_actual_minus_expected": {
+              "000": 0,
+              "111": 0
+            },
+            "total_variation_distance": 0.0,
+            "hellinger_distance": 0.0,
+            "probability_delta_actual_minus_expected": {
+              "000": 0.0,
+              "111": 0.0
+            },
+            "shots": 512,
+            "seed": 1504,
+            "noise_probability": 0.0,
+            "baseline_release": "2.6.0",
+            "current_release": "2.6.0",
+            "detail": "Counts match the saved baseline."
+          },
+          {
+            "name": "hadamard-sampling",
+            "passed": true,
+            "comparison_mode": "exact-counts-for-fixed-seed",
+            "expected_counts": {
+              "0": 259,
+              "1": 253
+            },
+            "actual_counts": {
+              "0": 259,
+              "1": 253
+            },
+            "count_delta_actual_minus_expected": {
+              "0": 0,
+              "1": 0
+            },
+            "total_variation_distance": 0.0,
+            "hellinger_distance": 0.0,
+            "probability_delta_actual_minus_expected": {
+              "0": 0.0,
+              "1": 0.0
+            },
+            "shots": 512,
+            "seed": 1505,
+            "noise_probability": 0.0,
+            "baseline_release": "2.6.0",
+            "current_release": "2.6.0",
+            "detail": "Counts match the saved baseline."
+          },
+          {
+            "name": "zero-state-noisy-2pct",
+            "passed": true,
+            "comparison_mode": "exact-counts-for-fixed-seed",
+            "expected_counts": {
+              "0": 250,
+              "1": 6
+            },
+            "actual_counts": {
+              "0": 250,
+              "1": 6
+            },
+            "count_delta_actual_minus_expected": {
+              "0": 0,
+              "1": 0
+            },
+            "total_variation_distance": 0.0,
+            "hellinger_distance": 0.0,
+            "probability_delta_actual_minus_expected": {
+              "0": 0.0,
+              "1": 0.0
+            },
+            "shots": 256,
+            "seed": 1506,
+            "noise_probability": 0.02,
+            "baseline_release": "2.6.0",
+            "current_release": "2.6.0",
+            "detail": "Counts match the saved baseline."
+          }
+        ],
+        "caveats": [
+          "Exact-count regression is appropriate for a fixed implementation and fixed seeds.",
+          "An intentional simulator algorithm change may require a reviewed baseline update.",
+          "TVD and Hellinger distance compare empirical distributions; they do not explain the cause of a difference.",
+          "Passing regression tests is not proof of universal circuit correctness or hardware equivalence."
+        ]
+      }
+    }
+  ],
+  "caveats": [
+    "This summarizes supplied JSON reports; it does not rerun their tests.",
+    "Missing or unrecognized status fields are informational, not passed.",
+    "Memory metrics may represent tracemalloc allocations rather than total process RAM."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "report_schema": "qwp777-memory-estimate-1",
+  "num_qubits": 32,
+  "matrix_rows_total": 128,
+  "matrix_slots_total": 4096,
+  "estimated_list_container_bytes": 41640,
+  "estimated_list_container_mib": 0.03971099853515625,
+  "estimator": "sys.getsizeof list-container estimate",
+  "scope": "X/Z matrix row and outer lists plus phase vector; excludes element objects and total process RSS",
+  "interpretation": "Host/Python-specific estimate, not a memory guarantee."
+}

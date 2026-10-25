@@ -1,0 +1,74 @@
+{
+  "report_schema": "qwp777-device-comparison-1",
+  "workload": {
+    "num_qubits": 1,
+    "gate_count": 2,
+    "shots_per_iteration": 20,
+    "seed_base": 41,
+    "noise_probability": 0.0,
+    "identity_sha256": "36b03e60ba29e2129243a7f590fe8dfef3061dca6d8831bf5aa2ba6f9aba8896"
+  },
+  "samples": {
+    "previous": 6,
+    "current": 6
+  },
+  "software": {
+    "previous": {
+      "release": "2.4.0"
+    },
+    "current": {
+      "release": "2.4.0"
+    }
+  },
+  "environment": {
+    "same_host_fingerprint": true,
+    "previous_runtime": {
+      "python_version": "3.13.5",
+      "python_implementation": "CPython",
+      "python_executable": "/opt/pyvenv/bin/python",
+      "os_system": "Linux",
+      "os_release": "6.18.55",
+      "machine_architecture": "x86_64",
+      "processor_description": null,
+      "logical_cpu_count": 5,
+      "total_memory_bytes": 6236856320
+    },
+    "current_runtime": {
+      "python_version": "3.13.5",
+      "python_implementation": "CPython",
+      "python_executable": "/opt/pyvenv/bin/python",
+      "os_system": "Linux",
+      "os_release": "6.18.55",
+      "machine_architecture": "x86_64",
+      "processor_description": null,
+      "logical_cpu_count": 5,
+      "total_memory_bytes": 6236856320
+    },
+    "note": "A matching fingerprint is not a full hardware identity; different fingerprints are expected for cross-device tests."
+  },
+  "median_duration_seconds": {
+    "previous": 0.0011453224997239886,
+    "current": 0.0011711705001289374,
+    "change_percent": 2.2568316270026956
+  },
+  "median_python_tracemalloc_current_bytes_after_cleanup": {
+    "previous": 1711.0,
+    "current": 1711.0,
+    "change_percent": 0.0
+  },
+  "maximum_sampled_rss_bytes": {
+    "previous": 98570240.0,
+    "current": 98594816.0,
+    "change_percent": 0.0249324745480989
+  },
+  "summary": {
+    "workloads_match": true,
+    "cross_host_comparison": false,
+    "rss_available_both_sides": true
+  },
+  "caveats": [
+    "Same circuit identity, qubit count, shot count, seed base and noise setting are required for comparison.",
+    "Cross-device time and RSS deltas are descriptive; CPU frequency, thermals, OS, Python build and background activity affect results.",
+    "tracemalloc measures tracked Python allocations, not total process memory; RSS is best-effort and may be unavailable."
+  ]
+}

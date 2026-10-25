@@ -1,0 +1,93 @@
+name: QWP-777 CI and release
+
+on:
+  push:
+    branches: [main, master]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.release_meta.outputs.version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read release version
+        id: release_meta
+        shell: bash
+        run: echo "version=$(tr -d '[:space:]' < VERSION)" >> "$GITHUB_OUTPUT"
+      - name: Verify tag matches VERSION
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: python scripts/check_release_tag.py --tag "$GITHUB_REF_NAME"
+      - name: Run all release gates and build artifacts
+        run: bash scripts/ci_release.sh "$RUNNER_TEMP/qwp777-dist"
+      - name: Upload release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: qwp777-release-${{ github.sha }}
+          path: ${{ runner.temp }}/qwp777-dist/*
+          if-no-files-found: error
+          retention-days: 30
+
+  publish-tagged-release:
+    needs: validate-and-package
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+      artifact-metadata: write
+    steps:
+      - name: Download validated release artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: qwp777-release-${{ github.sha }}
+          path: ${{ runner.temp }}/qwp777-dist
+      - name: Recheck release tag
+        shell: bash
+        run: |
+          ZIP="$RUNNER_TEMP/qwp777-dist/Qwantum-Processor-777-v${{ needs.validate-and-package.outputs.version }}.zip"
+          test -f "$ZIP"
+          python - "$ZIP" <<'PY'
+          import hashlib, pathlib, sys
+          p = pathlib.Path(sys.argv[1])
+          sidecar = pathlib.Path(str(p) + ".sha256")
+          expected = sidecar.read_text(encoding="utf-8").split()[0]
+          actual = hashlib.sha256(p.read_bytes()).hexdigest()
+          if not expected or expected != actual:
+              raise SystemExit("SHA-256 sidecar mismatch; refusing to publish")
+          print(f"Verified {p.name}: {actual}")
+          PY
+      - name: Attest release archive with GitHub/Sigstore provenance
+        uses: actions/attest@v4
+        with:
+          subject-path: ${{ runner.temp }}/qwp777-dist/Qwantum-Processor-777-v${{ needs.validate-and-package.outputs.version }}.zip
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          name: QWP-777 v${{ needs.validate-and-package.outputs.version }}
+          generate_release_notes: true
+          files: |
+            ${{ runner.temp }}/qwp777-dist/Qwantum-Processor-777-v${{ needs.validate-and-package.outputs.version }}.zip
+            ${{ runner.temp }}/qwp777-dist/Qwantum-Processor-777-v${{ needs.validate-and-package.outputs.version }}.zip.sha256
+            ${{ runner.temp }}/qwp777-dist/RELEASE_MANIFEST.json
+            ${{ runner.temp }}/qwp777-dist/SBOM.cdx.json
+            ${{ runner.temp }}/qwp777-dist/DEPENDENCY_AUDIT.json
+            ${{ runner.temp }}/qwp777-dist/PROVENANCE.json
+            ${{ runner.temp }}/qwp777-dist/RELEASE_AUDIT.json
+            ${{ runner.temp }}/qwp777-dist/TEST_REPORT.md
+            ${{ runner.temp }}/qwp777-dist/TEST_REPORT.json
+            ${{ runner.temp }}/qwp777-dist/regression-report.json

@@ -1,0 +1,32 @@
+{
+  "num_qubits": 2,
+  "shots": 1000,
+  "seed": 777,
+  "gates": [
+    {
+      "gate": "H",
+      "qubits": [
+        0
+      ]
+    },
+    {
+      "gate": "CX",
+      "qubits": [
+        0,
+        1
+      ]
+    },
+    {
+      "gate": "MEASURE",
+      "qubits": [
+        0
+      ]
+    },
+    {
+      "gate": "MEASURE",
+      "qubits": [
+        1
+      ]
+    }
+  ]
+}

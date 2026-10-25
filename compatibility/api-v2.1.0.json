@@ -1,0 +1,53 @@
+{
+  "compatibility_schema": "qwp777-api-compatibility-1",
+  "snapshot_release": "2.1.0",
+  "snapshot_api_version": "2.1",
+  "experiment_result_schema": "qwp777-experiment-1",
+  "public_exports": [
+    "__version__",
+    "API_VERSION",
+    "run_circuit",
+    "run_experiment",
+    "compare_distributions",
+    "validate_gates",
+    "validate_result",
+    "ExperimentError",
+    "CircuitSchemaError",
+    "ResultContractError",
+    "summarize_counts",
+    "StatisticsError",
+    "statevector_probabilities",
+    "validate_probability_distribution",
+    "ReferenceError",
+    "compare_counts_to_reference",
+    "DifferentialValidationError"
+  ],
+  "required_callable_exports": [
+    "run_circuit",
+    "run_experiment",
+    "compare_distributions",
+    "validate_gates",
+    "validate_result",
+    "summarize_counts",
+    "statevector_probabilities",
+    "validate_probability_distribution",
+    "compare_counts_to_reference"
+  ],
+  "notes": [
+    "QWP-777 v2.1.0 freezes the v2.1 public export names and callable signatures.",
+    "The experiment result schema remains qwp777-experiment-1; profiler and runtime diagnostics are separate opt-in tools.",
+    "The v1.6.0 legacy contract and v2.0.0 API snapshot remain preserved as historical compatibility gates.",
+    "This is a source-level contract, not a complete semantic proof."
+  ],
+  "callable_signatures": {
+    "run_circuit": "(config)",
+    "run_experiment": "(num_qubits, gates, shots=1000, seed=7, noise_probability=0.0)",
+    "compare_distributions": "(observed, reference)",
+    "validate_gates": "(gates, num_qubits)",
+    "validate_result": "(result)",
+    "summarize_counts": "(counts, shots=None)",
+    "statevector_probabilities": "(num_qubits, gates)",
+    "validate_probability_distribution": "(distribution, tolerance=1e-09)",
+    "compare_counts_to_reference": "(num_qubits, unitary_gates, counts)"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "report_schema": "qwp777-regression-report-2",
+  "generated_utc": "2026-10-24T17:58:39+00:00",
+  "software": {
+    "release": "2.5.0",
+    "api_version": "2.5"
+  },
+  "baseline": {
+    "path": "regression/baselines/v2.5.0.json",
+    "baseline_release": "2.5.0",
+    "sha256": "31e0b3bd6137d02aaf49d81a28b85b86e12f7f69902a9ba75be7eb817c61a7e3",
+    "case_count": 6,
+    "comparison_mode": "exact-counts-for-fixed-seed"
+  },
+  "summary": {
+    "cases_total": 6,
+    "cases_passed": 6,
+    "cases_failed": 0,
+    "passed": true,
+    "cases_with_distribution_changes": 0,
+    "maximum_total_variation_distance": 0.0,
+    "mean_total_variation_distance": 0.0
+  },
+  "cases": [
+    {
+      "name": "zero-state",
+      "passed": true,
+      "comparison_mode": "exact-counts-for-fixed-seed",
+      "expected_counts": {
+        "0": 256
+      },
+      "actual_counts": {
+        "0": 256
+      },
+      "count_delta_actual_minus_expected": {
+        "0": 0
+      },
+      "total_variation_distance": 0.0,
+      "hellinger_distance": 0.0,
+      "probability_delta_actual_minus_expected": {
+        "0": 0.0
+      },
+      "shots": 256,
+      "seed": 1501,
+      "noise_probability": 0.0,
+      "baseline_release": "2.5.0",
+      "current_release": "2.5.0",
+      "detail": "Counts match the saved baseline."
+    },
+    {
+      "name": "pauli-x",
+      "passed": true,
+      "comparison_mode": "exact-counts-for-fixed-seed",
+      "expected_counts": {
+        "1": 256
+      },
+      "actual_counts": {
+        "1": 256
+      },
+      "count_delta_actual_minus_expected": {
+        "1": 0
+      },
+      "total_variation_distance": 0.0,
+      "hellinger_distance": 0.0,
+      "probability_delta_actual_minus_expected": {
+        "1": 0.0
+      },
+      "shots": 256,
+      "seed": 1502,
+      "noise_probability": 0.0,
+      "baseline_release": "2.5.0",
+      "current_release": "2.5.0",
+      "detail": "Counts match the saved baseline."
+    },
+    {
+      "name": "bell-state",
+      "passed": true,
+      "comparison_mode": "exact-counts-for-fixed-seed",
+      "expected_counts": {
+        "00": 258,
+        "11": 254
+      },
+      "actual_counts": {
+        "00": 258,
+        "11": 254
+      },
+      "count_delta_actual_minus_expected": {
+        "00": 0,
+        "11": 0
+      },
+      "total_variation_distance": 0.0,
+      "hellinger_distance": 0.0,
+      "probability_delta_actual_minus_expected": {
+        "00": 0.0,
+        "11": 0.0
+      },
+      "shots": 512,
+      "seed": 1503,
+      "noise_probability": 0.0,
+      "baseline_release": "2.5.0",
+      "current_release": "2.5.0",
+      "detail": "Counts match the saved baseline."
+    },
+    {
+      "name": "ghz-three-qubit",
+      "passed": true,
+      "comparison_mode": "exact-counts-for-fixed-seed",
+      "expected_counts": {
+        "000": 259,
+        "111": 253
+      },
+      "actual_counts": {
+        "000": 259,
+        "111": 253
+      },
+      "count_delta_actual_minus_expected": {
+        "000": 0,
+        "111": 0
+      },
+      "total_variation_distance": 0.0,
+      "hellinger_distance": 0.0,
+      "probability_delta_actual_minus_expected": {
+        "000": 0.0,
+        "111": 0.0
+      },
+      "shots": 512,
+      "seed": 1504,
+      "noise_probability": 0.0,
+      "baseline_release": "2.5.0",
+      "current_release": "2.5.0",
+      "detail": "Counts match the saved baseline."
+    },
+    {
+      "name": "hadamard-sampling",
+      "passed": true,
+      "comparison_mode": "exact-counts-for-fixed-seed",
+      "expected_counts": {
+        "0": 259,
+        "1": 253
+      },
+      "actual_counts": {
+        "0": 259,
+        "1": 253
+      },
+      "count_delta_actual_minus_expected": {
+        "0": 0,
+        "1": 0
+      },
+      "total_variation_distance": 0.0,
+      "hellinger_distance": 0.0,
+      "probability_delta_actual_minus_expected": {
+        "0": 0.0,
+        "1": 0.0
+      },
+      "shots": 512,
+      "seed": 1505,
+      "noise_probability": 0.0,
+      "baseline_release": "2.5.0",
+      "current_release": "2.5.0",
+      "detail": "Counts match the saved baseline."
+    },
+    {
+      "name": "zero-state-noisy-2pct",
+      "passed": true,
+      "comparison_mode": "exact-counts-for-fixed-seed",
+      "expected_counts": {
+        "0": 250,
+        "1": 6
+      },
+      "actual_counts": {
+        "0": 250,
+        "1": 6
+      },
+      "count_delta_actual_minus_expected": {
+        "0": 0,
+        "1": 0
+      },
+      "total_variation_distance": 0.0,
+      "hellinger_distance": 0.0,
+      "probability_delta_actual_minus_expected": {
+        "0": 0.0,
+        "1": 0.0
+      },
+      "shots": 256,
+      "seed": 1506,
+      "noise_probability": 0.02,
+      "baseline_release": "2.5.0",
+      "current_release": "2.5.0",
+      "detail": "Counts match the saved baseline."
+    }
+  ],
+  "caveats": [
+    "Exact-count regression is appropriate for a fixed implementation and fixed seeds.",
+    "An intentional simulator algorithm change may require a reviewed baseline update.",
+    "TVD and Hellinger distance compare empirical distributions; they do not explain the cause of a difference.",
+    "Passing regression tests is not proof of universal circuit correctness or hardware equivalence."
+  ]
+}

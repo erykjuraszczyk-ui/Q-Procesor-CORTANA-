@@ -1,0 +1,487 @@
+{
+  "report_schema": "qwp777-benchmark-report-1",
+  "software": {
+    "release": "2.2.0",
+    "api_version": "2.2"
+  },
+  "configuration": {
+    "qubit_sizes": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "shot_sizes": [
+      1,
+      10,
+      100
+    ],
+    "repeats": 2,
+    "seed": 2026,
+    "max_work_units": 30000000,
+    "planned_work_units": 24941034,
+    "timed_runs_per_case": 2,
+    "additional_traced_memory_pass_per_case": 1
+  },
+  "summary": {
+    "cases_total": 18,
+    "cases_passed": 18,
+    "cases_failed": 0,
+    "maximum_elapsed_seconds": 0.4666121260006548,
+    "maximum_tracemalloc_peak_bytes": 91347
+  },
+  "runtime": {
+    "python_version": "3.13.5",
+    "python_implementation": "CPython",
+    "python_executable": "/opt/pyvenv/bin/python",
+    "os_system": "Linux",
+    "os_release": "6.18.55",
+    "machine_architecture": "x86_64",
+    "processor_description": null,
+    "logical_cpu_count": 5,
+    "total_memory_bytes": 6236856320
+  },
+  "cases": [
+    {
+      "num_qubits": 1,
+      "shots_per_run": 1,
+      "repeats": 2,
+      "gate_count": 2,
+      "work_units_estimate": 6,
+      "timing_seconds": {
+        "samples": [
+          5.9156999668630306e-05,
+          3.149599979224149e-05
+        ],
+        "minimum": 3.149599979224149e-05,
+        "median": 4.53264997304359e-05,
+        "mean": 4.53264997304359e-05,
+        "maximum": 5.9156999668630306e-05
+      },
+      "tracemalloc_peak_bytes": 4566,
+      "estimated_tableau_list_container_bytes": 472,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 1,
+      "shots_per_run": 10,
+      "repeats": 2,
+      "gate_count": 2,
+      "work_units_estimate": 60,
+      "timing_seconds": {
+        "samples": [
+          0.0002613639999253792,
+          9.549000060360413e-05
+        ],
+        "minimum": 9.549000060360413e-05,
+        "median": 0.00017842700026449165,
+        "mean": 0.00017842700026449165,
+        "maximum": 0.0002613639999253792
+      },
+      "tracemalloc_peak_bytes": 6918,
+      "estimated_tableau_list_container_bytes": 472,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 1,
+      "shots_per_run": 100,
+      "repeats": 2,
+      "gate_count": 2,
+      "work_units_estimate": 600,
+      "timing_seconds": {
+        "samples": [
+          0.0010884899993470754,
+          0.0008603340002082405
+        ],
+        "minimum": 0.0008603340002082405,
+        "median": 0.0009744119997776579,
+        "mean": 0.0009744119997776579,
+        "maximum": 0.0010884899993470754
+      },
+      "tracemalloc_peak_bytes": 6918,
+      "estimated_tableau_list_container_bytes": 472,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 2,
+      "shots_per_run": 1,
+      "repeats": 2,
+      "gate_count": 4,
+      "work_units_estimate": 48,
+      "timing_seconds": {
+        "samples": [
+          4.7931000153766945e-05,
+          2.8252000447537284e-05
+        ],
+        "minimum": 2.8252000447537284e-05,
+        "median": 3.8091500300652115e-05,
+        "mean": 3.8091500300652115e-05,
+        "maximum": 4.7931000153766945e-05
+      },
+      "tracemalloc_peak_bytes": 4584,
+      "estimated_tableau_list_container_bytes": 840,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 2,
+      "shots_per_run": 10,
+      "repeats": 2,
+      "gate_count": 4,
+      "work_units_estimate": 480,
+      "timing_seconds": {
+        "samples": [
+          0.00015527899995504413,
+          0.0002085860005536233
+        ],
+        "minimum": 0.00015527899995504413,
+        "median": 0.00018193250025433372,
+        "mean": 0.00018193250025433372,
+        "maximum": 0.0002085860005536233
+      },
+      "tracemalloc_peak_bytes": 7145,
+      "estimated_tableau_list_container_bytes": 840,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 2,
+      "shots_per_run": 100,
+      "repeats": 2,
+      "gate_count": 4,
+      "work_units_estimate": 4800,
+      "timing_seconds": {
+        "samples": [
+          0.0014061460005905246,
+          0.0013755509999100468
+        ],
+        "minimum": 0.0013755509999100468,
+        "median": 0.0013908485002502857,
+        "mean": 0.0013908485002502857,
+        "maximum": 0.0014061460005905246
+      },
+      "tracemalloc_peak_bytes": 7145,
+      "estimated_tableau_list_container_bytes": 840,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 4,
+      "shots_per_run": 1,
+      "repeats": 2,
+      "gate_count": 8,
+      "work_units_estimate": 384,
+      "timing_seconds": {
+        "samples": [
+          6.0649000261037145e-05,
+          4.2762999328260776e-05
+        ],
+        "minimum": 4.2762999328260776e-05,
+        "median": 5.170599979464896e-05,
+        "mean": 5.170599979464896e-05,
+        "maximum": 6.0649000261037145e-05
+      },
+      "tracemalloc_peak_bytes": 5096,
+      "estimated_tableau_list_container_bytes": 1768,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 4,
+      "shots_per_run": 10,
+      "repeats": 2,
+      "gate_count": 8,
+      "work_units_estimate": 3840,
+      "timing_seconds": {
+        "samples": [
+          0.00040356299996346934,
+          0.00034772100025293184
+        ],
+        "minimum": 0.00034772100025293184,
+        "median": 0.0003756420001082006,
+        "mean": 0.0003756420001082006,
+        "maximum": 0.00040356299996346934
+      },
+      "tracemalloc_peak_bytes": 8111,
+      "estimated_tableau_list_container_bytes": 1768,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 4,
+      "shots_per_run": 100,
+      "repeats": 2,
+      "gate_count": 8,
+      "work_units_estimate": 38400,
+      "timing_seconds": {
+        "samples": [
+          0.0031563689999529743,
+          0.003061248000449268
+        ],
+        "minimum": 0.003061248000449268,
+        "median": 0.003108808500201121,
+        "mean": 0.003108808500201121,
+        "maximum": 0.0031563689999529743
+      },
+      "tracemalloc_peak_bytes": 8111,
+      "estimated_tableau_list_container_bytes": 1768,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 8,
+      "shots_per_run": 1,
+      "repeats": 2,
+      "gate_count": 16,
+      "work_units_estimate": 3072,
+      "timing_seconds": {
+        "samples": [
+          0.000213794999581296,
+          0.0001237619999301387
+        ],
+        "minimum": 0.0001237619999301387,
+        "median": 0.00016877849975571735,
+        "mean": 0.00016877849975571735,
+        "maximum": 0.000213794999581296
+      },
+      "tracemalloc_peak_bytes": 7048,
+      "estimated_tableau_list_container_bytes": 4392,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 8,
+      "shots_per_run": 10,
+      "repeats": 2,
+      "gate_count": 16,
+      "work_units_estimate": 30720,
+      "timing_seconds": {
+        "samples": [
+          0.0011719020003511105,
+          0.001170760000604787
+        ],
+        "minimum": 0.001170760000604787,
+        "median": 0.0011713310004779487,
+        "mean": 0.0011713310004779487,
+        "maximum": 0.0011719020003511105
+      },
+      "tracemalloc_peak_bytes": 11739,
+      "estimated_tableau_list_container_bytes": 4392,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 8,
+      "shots_per_run": 100,
+      "repeats": 2,
+      "gate_count": 16,
+      "work_units_estimate": 307200,
+      "timing_seconds": {
+        "samples": [
+          0.01161291600055847,
+          0.016648174999318144
+        ],
+        "minimum": 0.01161291600055847,
+        "median": 0.014130545499938307,
+        "mean": 0.014130545499938307,
+        "maximum": 0.016648174999318144
+      },
+      "tracemalloc_peak_bytes": 11739,
+      "estimated_tableau_list_container_bytes": 4392,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 16,
+      "shots_per_run": 1,
+      "repeats": 2,
+      "gate_count": 32,
+      "work_units_estimate": 24576,
+      "timing_seconds": {
+        "samples": [
+          0.0008087679998425301,
+          0.0006705550003971439
+        ],
+        "minimum": 0.0006705550003971439,
+        "median": 0.000739661500119837,
+        "mean": 0.000739661500119837,
+        "maximum": 0.0008087679998425301
+      },
+      "tracemalloc_peak_bytes": 14196,
+      "estimated_tableau_list_container_bytes": 12712,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 16,
+      "shots_per_run": 10,
+      "repeats": 2,
+      "gate_count": 32,
+      "work_units_estimate": 245760,
+      "timing_seconds": {
+        "samples": [
+          0.006974029000048176,
+          0.006594360999770288
+        ],
+        "minimum": 0.006594360999770288,
+        "median": 0.006784194999909232,
+        "mean": 0.006784194999909232,
+        "maximum": 0.006974029000048176
+      },
+      "tracemalloc_peak_bytes": 28355,
+      "estimated_tableau_list_container_bytes": 12712,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 16,
+      "shots_per_run": 100,
+      "repeats": 2,
+      "gate_count": 32,
+      "work_units_estimate": 2457600,
+      "timing_seconds": {
+        "samples": [
+          0.06723756900009903,
+          0.06670693900014157
+        ],
+        "minimum": 0.06670693900014157,
+        "median": 0.0669722540001203,
+        "mean": 0.0669722540001203,
+        "maximum": 0.06723756900009903
+      },
+      "tracemalloc_peak_bytes": 28355,
+      "estimated_tableau_list_container_bytes": 12712,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 32,
+      "shots_per_run": 1,
+      "repeats": 2,
+      "gate_count": 64,
+      "work_units_estimate": 196608,
+      "timing_seconds": {
+        "samples": [
+          0.007936773000437825,
+          0.004996853000193369
+        ],
+        "minimum": 0.004996853000193369,
+        "median": 0.006466813000315597,
+        "mean": 0.006466813000315597,
+        "maximum": 0.007936773000437825
+      },
+      "tracemalloc_peak_bytes": 44088,
+      "estimated_tableau_list_container_bytes": 41640,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 32,
+      "shots_per_run": 10,
+      "repeats": 2,
+      "gate_count": 64,
+      "work_units_estimate": 1966080,
+      "timing_seconds": {
+        "samples": [
+          0.04858711100041546,
+          0.053027146000204084
+        ],
+        "minimum": 0.04858711100041546,
+        "median": 0.05080712850030977,
+        "mean": 0.05080712850030977,
+        "maximum": 0.053027146000204084
+      },
+      "tracemalloc_peak_bytes": 89947,
+      "estimated_tableau_list_container_bytes": 41640,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    },
+    {
+      "num_qubits": 32,
+      "shots_per_run": 100,
+      "repeats": 2,
+      "gate_count": 64,
+      "work_units_estimate": 19660800,
+      "timing_seconds": {
+        "samples": [
+          0.4666121260006548,
+          0.4340872490001857
+        ],
+        "minimum": 0.4340872490001857,
+        "median": 0.45034968750042026,
+        "mean": 0.45034968750042026,
+        "maximum": 0.4666121260006548
+      },
+      "tracemalloc_peak_bytes": 91347,
+      "estimated_tableau_list_container_bytes": 41640,
+      "result_invariants": {
+        "counts_sum_matches_shots": true,
+        "outcome_keys_are_bitstrings": true,
+        "passed": true
+      }
+    }
+  ],
+  "caveats": [
+    "Benchmark measurements are host-specific and should be repeated on the target device.",
+    "tracemalloc is sampled in a separate pass and does not report process RSS.",
+    "The work-units figure is a conservative workload proxy, not a prediction of CPU seconds.",
+    "The generated circuit is a GHZ-style Clifford workload, not a general quantum-circuit benchmark.",
+    "QWP-777 is an educational software prototype, not physical quantum hardware."
+  ]
+}

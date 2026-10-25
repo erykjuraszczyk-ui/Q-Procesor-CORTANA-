@@ -1,0 +1,53 @@
+{
+  "compatibility_schema": "qwp777-api-compatibility-1",
+  "snapshot_release": "2.8.0",
+  "snapshot_api_version": "2.8",
+  "experiment_result_schema": "qwp777-experiment-1",
+  "public_exports": [
+    "__version__",
+    "API_VERSION",
+    "run_circuit",
+    "run_experiment",
+    "compare_distributions",
+    "validate_gates",
+    "validate_result",
+    "ExperimentError",
+    "CircuitSchemaError",
+    "ResultContractError",
+    "summarize_counts",
+    "StatisticsError",
+    "statevector_probabilities",
+    "validate_probability_distribution",
+    "ReferenceError",
+    "compare_counts_to_reference",
+    "DifferentialValidationError"
+  ],
+  "required_callable_exports": [
+    "run_circuit",
+    "run_experiment",
+    "compare_distributions",
+    "validate_gates",
+    "validate_result",
+    "summarize_counts",
+    "statevector_probabilities",
+    "validate_probability_distribution",
+    "compare_counts_to_reference"
+  ],
+  "notes": [
+    "QWP-777 v2.8.0 freezes the v2.8 public export names and callable signatures; release-signing and provenance tools are diagnostics CLIs and do not expand qwp777_api.__all__.",
+    "The experiment result schema remains qwp777-experiment-1; historical API snapshots remain immutable compatibility gates.",
+    "The release manifest hashes project files except itself; an Ed25519 detached signature authenticates the exact manifest bytes relative to a trusted public key.",
+    "The detached ZIP SHA-256 checks archive integrity, not publisher identity. Trust in the public key must be established separately."
+  ],
+  "callable_signatures": {
+    "run_circuit": "(config)",
+    "run_experiment": "(num_qubits, gates, shots=1000, seed=7, noise_probability=0.0)",
+    "compare_distributions": "(observed, reference)",
+    "validate_gates": "(gates, num_qubits)",
+    "validate_result": "(result)",
+    "summarize_counts": "(counts, shots=None)",
+    "statevector_probabilities": "(num_qubits, gates)",
+    "validate_probability_distribution": "(distribution, tolerance=1e-09)",
+    "compare_counts_to_reference": "(num_qubits, unitary_gates, counts)"
+  }
+}

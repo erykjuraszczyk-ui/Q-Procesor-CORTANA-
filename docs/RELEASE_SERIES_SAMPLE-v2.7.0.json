@@ -1,0 +1,346 @@
+{
+  "report_schema": "qwp777-release-series-report-1",
+  "generated_utc": "2026-10-24T19:24:47+00:00",
+  "overall_status": "history_clean_or_informational",
+  "summary": {
+    "reports_total": 5,
+    "releases_total": 4,
+    "audit_reports_total": 1,
+    "regression_reports_total": 4,
+    "health_reports_total": 0,
+    "failed_releases": 0,
+    "releases_requiring_review": 0,
+    "release_transitions_compared": 3,
+    "cross_release_regression_failures": 0,
+    "transitions_requiring_review": 0,
+    "clean": true
+  },
+  "releases": [
+    {
+      "release": "2.4.0",
+      "status": "informational",
+      "reports_total": 1,
+      "report_files": [
+        "v2.4.0-regression.json"
+      ],
+      "report_types": {
+        "audit": 0,
+        "regression": 1,
+        "health": 0
+      },
+      "audit_checks_total": null,
+      "audit_checks_passed": null,
+      "unit_tests_run": null,
+      "regression_cases_total": 6,
+      "regression_cases_failed": 0,
+      "health_reports_requiring_review": 0,
+      "failed_audit_reports": 0,
+      "failed_regression_reports": 0,
+      "records": [
+        {
+          "file": "v2.4.0-regression.json",
+          "kind": "regression",
+          "report_schema": "qwp777-regression-report-2",
+          "generated_utc": "2026-10-24T17:24:26+00:00",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "release": "2.5.0",
+      "status": "informational",
+      "reports_total": 1,
+      "report_files": [
+        "v2.5.0-regression.json"
+      ],
+      "report_types": {
+        "audit": 0,
+        "regression": 1,
+        "health": 0
+      },
+      "audit_checks_total": null,
+      "audit_checks_passed": null,
+      "unit_tests_run": null,
+      "regression_cases_total": 6,
+      "regression_cases_failed": 0,
+      "health_reports_requiring_review": 0,
+      "failed_audit_reports": 0,
+      "failed_regression_reports": 0,
+      "records": [
+        {
+          "file": "v2.5.0-regression.json",
+          "kind": "regression",
+          "report_schema": "qwp777-regression-report-2",
+          "generated_utc": "2026-10-24T17:58:39+00:00",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "release": "2.6.0",
+      "status": "informational",
+      "reports_total": 1,
+      "report_files": [
+        "v2.6.0-regression.json"
+      ],
+      "report_types": {
+        "audit": 0,
+        "regression": 1,
+        "health": 0
+      },
+      "audit_checks_total": null,
+      "audit_checks_passed": null,
+      "unit_tests_run": null,
+      "regression_cases_total": 6,
+      "regression_cases_failed": 0,
+      "health_reports_requiring_review": 0,
+      "failed_audit_reports": 0,
+      "failed_regression_reports": 0,
+      "records": [
+        {
+          "file": "v2.6.0-regression.json",
+          "kind": "regression",
+          "report_schema": "qwp777-regression-report-2",
+          "generated_utc": "2026-10-24T19:06:35+00:00",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "release": "2.7.0",
+      "status": "passed",
+      "reports_total": 2,
+      "report_files": [
+        "v2.7.0-regression.json",
+        "RELEASE_AUDIT.json"
+      ],
+      "report_types": {
+        "audit": 1,
+        "regression": 1,
+        "health": 0
+      },
+      "audit_checks_total": 17,
+      "audit_checks_passed": 17,
+      "unit_tests_run": 170,
+      "regression_cases_total": 6,
+      "regression_cases_failed": 0,
+      "health_reports_requiring_review": 0,
+      "failed_audit_reports": 0,
+      "failed_regression_reports": 0,
+      "records": [
+        {
+          "file": "v2.7.0-regression.json",
+          "kind": "regression",
+          "report_schema": "qwp777-regression-report-2",
+          "generated_utc": "2026-10-24T19:24:42+00:00",
+          "status": "passed"
+        },
+        {
+          "file": "RELEASE_AUDIT.json",
+          "kind": "audit",
+          "report_schema": "qwp777-release-audit-report-1",
+          "generated_utc": "2026-10-24T19:24:46+00:00",
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "previous_release": "2.4.0",
+      "current_release": "2.5.0",
+      "cases_shared": 6,
+      "cases_added": 0,
+      "cases_removed": 0,
+      "regression_failures": 0,
+      "cases_with_changed_distributions": 0,
+      "status_counts": {
+        "unchanged_and_passed": 6
+      },
+      "clean": true,
+      "cases": [
+        {
+          "name": "bell-state",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "ghz-three-qubit",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "hadamard-sampling",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "pauli-x",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "zero-state",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "zero-state-noisy-2pct",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        }
+      ]
+    },
+    {
+      "previous_release": "2.5.0",
+      "current_release": "2.6.0",
+      "cases_shared": 6,
+      "cases_added": 0,
+      "cases_removed": 0,
+      "regression_failures": 0,
+      "cases_with_changed_distributions": 0,
+      "status_counts": {
+        "unchanged_and_passed": 6
+      },
+      "clean": true,
+      "cases": [
+        {
+          "name": "bell-state",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "ghz-three-qubit",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "hadamard-sampling",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "pauli-x",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "zero-state",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "zero-state-noisy-2pct",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        }
+      ]
+    },
+    {
+      "previous_release": "2.6.0",
+      "current_release": "2.7.0",
+      "cases_shared": 6,
+      "cases_added": 0,
+      "cases_removed": 0,
+      "regression_failures": 0,
+      "cases_with_changed_distributions": 0,
+      "status_counts": {
+        "unchanged_and_passed": 6
+      },
+      "clean": true,
+      "cases": [
+        {
+          "name": "bell-state",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "ghz-three-qubit",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "hadamard-sampling",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "pauli-x",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "zero-state",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        },
+        {
+          "name": "zero-state-noisy-2pct",
+          "status": "unchanged_and_passed",
+          "previous_passed": true,
+          "current_passed": true,
+          "distribution_changed": false,
+          "total_variation_distance": 0.0
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "This report summarizes supplied JSON artifacts; it does not rerun test suites.",
+    "Only transitions between provided regression reports can be evaluated.",
+    "A missing report or metric is not treated as a pass.",
+    "Distribution changes are empirical count differences, not a scientific conclusion about correctness.",
+    "A clean history is not proof of universal correctness or hardware equivalence."
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "report_schema": "qwp777-soak-report-1",
+  "software": {
+    "release": "2.3.0"
+  },
+  "circuit": {
+    "num_qubits": 1,
+    "gate_count": 2,
+    "shots_per_iteration": 100,
+    "seed_base": 77,
+    "noise_probability": 0.0,
+    "identity_sha256": "36b03e60ba29e2129243a7f590fe8dfef3061dca6d8831bf5aa2ba6f9aba8896"
+  },
+  "configuration": {
+    "iterations": 12,
+    "warmup_iterations": 2,
+    "gc_between_iterations": true,
+    "planned_work_units_proxy": 2800,
+    "max_work_units_proxy": 10000000
+  },
+  "summary": {
+    "iterations_completed": 12,
+    "all_count_totals_valid": true,
+    "duration_seconds": {
+      "minimum": 0.0049664460002532,
+      "median": 0.005253103000086412,
+      "mean": 0.00529818916682719,
+      "maximum": 0.005873078999684367
+    },
+    "python_tracemalloc_peak_bytes_overall": 17944,
+    "python_tracemalloc_current_after_cleanup_bytes": {
+      "first": 313,
+      "last": 6557,
+      "minimum": 313,
+      "maximum": 6557,
+      "linear_slope_bytes_per_iteration": 567.1888111888112
+    },
+    "rss_current_bytes": {
+      "before": 98902016,
+      "first_sample": 98906112,
+      "last_sample": 98906112,
+      "maximum_sampled": 98906112,
+      "available": true
+    }
+  },
+  "warmup_duration_seconds": [
+    0.004170086999693012,
+    0.006082345999857353
+  ],
+  "samples": [
+    {
+      "iteration": 1,
+      "duration_seconds": 0.005021818000386702,
+      "python_tracemalloc_current_bytes_after_cleanup": 313,
+      "python_tracemalloc_peak_bytes_cumulative": 8828,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 2,
+      "duration_seconds": 0.005003410999961488,
+      "python_tracemalloc_current_bytes_after_cleanup": 901,
+      "python_tracemalloc_peak_bytes_cumulative": 11700,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 3,
+      "duration_seconds": 0.005711421000341943,
+      "python_tracemalloc_current_bytes_after_cleanup": 1457,
+      "python_tracemalloc_peak_bytes_cumulative": 12288,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 4,
+      "duration_seconds": 0.005284454000502592,
+      "python_tracemalloc_current_bytes_after_cleanup": 2013,
+      "python_tracemalloc_peak_bytes_cumulative": 12844,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 5,
+      "duration_seconds": 0.005221751999670232,
+      "python_tracemalloc_current_bytes_after_cleanup": 2569,
+      "python_tracemalloc_peak_bytes_cumulative": 13400,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 6,
+      "duration_seconds": 0.0049664460002532,
+      "python_tracemalloc_current_bytes_after_cleanup": 3157,
+      "python_tracemalloc_peak_bytes_cumulative": 13956,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 7,
+      "duration_seconds": 0.004985465000572731,
+      "python_tracemalloc_current_bytes_after_cleanup": 3713,
+      "python_tracemalloc_peak_bytes_cumulative": 14544,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 8,
+      "duration_seconds": 0.005286006000460475,
+      "python_tracemalloc_current_bytes_after_cleanup": 4269,
+      "python_tracemalloc_peak_bytes_cumulative": 15100,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 9,
+      "duration_seconds": 0.005522733999896445,
+      "python_tracemalloc_current_bytes_after_cleanup": 4825,
+      "python_tracemalloc_peak_bytes_cumulative": 15656,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 10,
+      "duration_seconds": 0.005873078999684367,
+      "python_tracemalloc_current_bytes_after_cleanup": 5445,
+      "python_tracemalloc_peak_bytes_cumulative": 16212,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 11,
+      "duration_seconds": 0.005201873000260093,
+      "python_tracemalloc_current_bytes_after_cleanup": 6001,
+      "python_tracemalloc_peak_bytes_cumulative": 16832,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    },
+    {
+      "iteration": 12,
+      "duration_seconds": 0.005499810999936017,
+      "python_tracemalloc_current_bytes_after_cleanup": 6557,
+      "python_tracemalloc_peak_bytes_cumulative": 17388,
+      "rss_current_bytes_after_cleanup": 98906112,
+      "counts_sha256": "aaac1d0d661ca1283191f3159dbef083a4d6209cbd6e95fb731e53c15c4ccd5c",
+      "count_total_valid": true
+    }
+  ],
+  "runtime": {
+    "python_version": "3.13.5",
+    "python_implementation": "CPython",
+    "python_executable": "/opt/pyvenv/bin/python",
+    "os_system": "Linux",
+    "os_release": "6.18.55",
+    "machine_architecture": "x86_64",
+    "processor_description": null,
+    "logical_cpu_count": 5,
+    "total_memory_bytes": 6236856320
+  },
+  "interpretation": [
+    "RSS is current resident set size read from /proc/self/status when available; None means unavailable on this host.",
+    "tracemalloc measures tracked Python allocations, not total process memory.",
+    "A short soak is not proof that a memory leak is absent; inspect trends across longer runs and multiple devices.",
+    "The workload proxy is conservative guidance, not a guaranteed runtime bound.",
+    "This report describes the machine where it ran; Android/Termux compatibility requires a separate run on that device."
+  ]
+}

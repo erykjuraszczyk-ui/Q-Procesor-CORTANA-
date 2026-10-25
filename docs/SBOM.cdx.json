@@ -1,0 +1,163 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:04d5b25c-4fd9-4795-94b1-aa654dbdd5fc",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-25T07:53:25+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "qwp777-sbom-generator",
+          "version": "3.1.0",
+          "purl": "pkg:generic/qwp777-sbom-generator@3.1.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "QWP-777",
+      "version": "3.1.0",
+      "bom-ref": "pkg:generic/QWP-777@3.1.0",
+      "purl": "pkg:generic/QWP-777@3.1.0",
+      "description": "Programmatic stabilizer-circuit simulator prototype; not physical quantum hardware."
+    },
+    "properties": [
+      {
+        "name": "qwp777:report-schema",
+        "value": "qwp777-sbom-report-1"
+      },
+      {
+        "name": "qwp777:dependency-policy-sha256",
+        "value": "afadd744f2fc7c002ec6723f7ef029f2fc84cbb39393653f6490f7e8a34894a5"
+      },
+      {
+        "name": "qwp777:lockfile-present",
+        "value": "false"
+      },
+      {
+        "name": "qwp777:build-python",
+        "value": "3.13.5"
+      },
+      {
+        "name": "qwp777:build-platform",
+        "value": "Linux-6.18.55-x86_64-with-glibc2.41"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "cryptography",
+      "bom-ref": "pkg:pypi/cryptography",
+      "purl": "pkg:pypi/cryptography",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "qwp777:scope",
+          "value": "optional"
+        },
+        {
+          "name": "qwp777:feature",
+          "value": "Ed25519 release-manifest signing and verification"
+        },
+        {
+          "name": "qwp777:version-policy",
+          "value": "unlocked; record observed version separately"
+        },
+        {
+          "name": "qwp777:observed-build-environment-version",
+          "value": "46.0.4"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "qiskit",
+      "bom-ref": "pkg:pypi/qiskit",
+      "purl": "pkg:pypi/qiskit",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "qwp777:scope",
+          "value": "optional"
+        },
+        {
+          "name": "qwp777:feature",
+          "value": "Optional Qiskit Aer comparison adapter"
+        },
+        {
+          "name": "qwp777:version-policy",
+          "value": "unlocked; record observed version separately"
+        },
+        {
+          "name": "qwp777:observed-build-environment-version",
+          "value": "not-installed"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "qiskit-aer",
+      "bom-ref": "pkg:pypi/qiskit-aer",
+      "purl": "pkg:pypi/qiskit-aer",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "qwp777:scope",
+          "value": "optional"
+        },
+        {
+          "name": "qwp777:feature",
+          "value": "Optional Aer simulation backend used with Qiskit"
+        },
+        {
+          "name": "qwp777:version-policy",
+          "value": "unlocked; record observed version separately"
+        },
+        {
+          "name": "qwp777:observed-build-environment-version",
+          "value": "not-installed"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:generic/QWP-777@3.1.0",
+      "dependsOn": [
+        "pkg:pypi/cryptography",
+        "pkg:pypi/qiskit",
+        "pkg:pypi/qiskit-aer"
+      ]
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "incomplete",
+      "assemblies": [
+        "pkg:generic/QWP-777@3.1.0"
+      ],
+      "dependencies": [
+        "pkg:pypi/cryptography",
+        "pkg:pypi/qiskit",
+        "pkg:pypi/qiskit-aer"
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "qwp777:vulnerability-scan",
+      "value": "not-performed-offline"
+    },
+    {
+      "name": "qwp777:dependency-version-locking",
+      "value": "not-configured"
+    },
+    {
+      "name": "qwp777:component-inventory",
+      "value": "declared-optional-integrations"
+    }
+  ]
+}

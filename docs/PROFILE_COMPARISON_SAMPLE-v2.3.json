@@ -1,0 +1,60 @@
+{
+  "report_schema": "qwp777-profile-comparison-1",
+  "previous_software": {
+    "release": "2.3.0",
+    "api_version": "2.3"
+  },
+  "current_software": {
+    "release": "2.3.0",
+    "api_version": "2.3"
+  },
+  "workload": {
+    "num_qubits": 1,
+    "gate_count": 2,
+    "shots_per_repeat": 100,
+    "seed": 77,
+    "repeats": 5
+  },
+  "timing_median_seconds": {
+    "previous": 0.004169906000242918,
+    "current": 0.004165509999438655,
+    "change_percent": -0.1054220599698669
+  },
+  "python_tracemalloc_peak_mean_bytes": {
+    "previous": 6938.4,
+    "current": 6938.4,
+    "change_percent": 0.0
+  },
+  "environment": {
+    "same_host_fingerprint": true,
+    "previous_runtime": {
+      "python_version": "3.13.5",
+      "python_implementation": "CPython",
+      "python_executable": "/opt/pyvenv/bin/python",
+      "os_system": "Linux",
+      "os_release": "6.18.55",
+      "machine_architecture": "x86_64",
+      "processor_description": null,
+      "logical_cpu_count": 5,
+      "total_memory_bytes": 6236856320
+    },
+    "current_runtime": {
+      "python_version": "3.13.5",
+      "python_implementation": "CPython",
+      "python_executable": "/opt/pyvenv/bin/python",
+      "os_system": "Linux",
+      "os_release": "6.18.55",
+      "machine_architecture": "x86_64",
+      "processor_description": null,
+      "logical_cpu_count": 5,
+      "total_memory_bytes": 6236856320
+    }
+  },
+  "caveats": [
+    "Compare only runs with identical workload parameters; that check was applied to the fields reported above.",
+    "Performance deltas are descriptive, not a universal threshold or proof of causality.",
+    "Python tracemalloc does not measure complete process RSS.",
+    "Host fingerprints can omit thermal state, power mode, background load and other relevant variables.",
+    "Cross-device timing comparisons are not suitable for attributing changes to software alone."
+  ]
+}

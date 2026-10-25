@@ -1,0 +1,54 @@
+{
+  "report_schema": "qwp777-profile-report-1",
+  "software": {
+    "release": "2.3.0",
+    "api_version": "2.3"
+  },
+  "circuit": {
+    "num_qubits": 1,
+    "gate_count": 2,
+    "shots_per_repeat": 100,
+    "repeats": 5,
+    "seed": 77
+  },
+  "timing_seconds": {
+    "samples": [
+      0.004366184999526013,
+      0.003989972000454145,
+      0.003984823999417131,
+      0.004466821999812964,
+      0.00427518099968438
+    ],
+    "minimum": 0.003984823999417131,
+    "median": 0.00427518099968438,
+    "mean": 0.004216596799778927,
+    "maximum": 0.004466821999812964
+  },
+  "python_tracemalloc_peak_bytes": {
+    "samples": [
+      7444,
+      6812,
+      6812,
+      6812,
+      6812
+    ],
+    "maximum": 7444,
+    "mean": 6938.4
+  },
+  "runtime": {
+    "python_version": "3.13.5",
+    "python_implementation": "CPython",
+    "python_executable": "/opt/pyvenv/bin/python",
+    "os_system": "Linux",
+    "os_release": "6.18.55",
+    "machine_architecture": "x86_64",
+    "processor_description": null,
+    "logical_cpu_count": 5,
+    "total_memory_bytes": 6236856320
+  },
+  "interpretation": [
+    "Timing and traced allocations depend on hardware, OS, Python build, and workload.",
+    "tracemalloc reports traced Python allocations, not total resident process memory.",
+    "No machine-independent performance threshold is implied by this report."
+  ]
+}
